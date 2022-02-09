@@ -570,11 +570,11 @@
   }
 }
 
-.post {
+.post__section {
   padding: 72px 0 90px;
   background-color: $primary-color;
 
-  &__title {
+  &-title {
     font: {
       family: $primary-font;
       size: 46px;
@@ -588,102 +588,11 @@
     text-align: center;
   }
 
-  &__wrapper {
+  &-wrapper {
     display: grid;
     grid-gap: 30px 31px;
     justify-content: space-around;
     grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
-  }
-
-  &__item {
-    background-color: $primary-color;
-    margin-bottom: 30px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-
-    & img {
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-      max-width: 585px;
-      width: 100%;
-    }
-
-    &-info {
-      padding: 10px 24px 22px 23px;
-    }
-
-    &-title {
-      font: {
-        family: $primary-font;
-        size: 18px;
-        weight: 700;
-      }
-
-      line-height: 25px;
-      color: #131b3c;
-    }
-
-    &-date {
-      font: {
-        family: $primary-font;
-        size: 12px;
-        weight: 400;
-      }
-
-      line-height: 18px;
-      letter-spacing: 0.02em;
-      color: #828282;
-    }
-
-    &-text {
-      font: {
-        family: $primary-font;
-        size: 16px;
-        weight: 400;
-      }
-
-      line-height: 26px;
-      letter-spacing: 0.01em;
-      color: #0B112A;
-      margin-bottom: 3px;
-      height: 78px;
-      overflow: hidden;
-    }
-
-    &-links {
-      display: flex;
-      justify-content: end;
-    }
-
-    &-link {
-      font: {
-        family: $primary-font;
-        size: 16px;
-        weight: 400;
-      }
-
-      line-height: 25px;
-      letter-spacing: -0.02em;
-      color: #FF9900;
-
-      &+& {
-        text-decoration: underline;
-        margin-left: 13px;
-
-        &:hover {
-          font-weight: 600;
-        }
-      }
-    }
-
-    &-more {
-      text-decoration: underline;
-      margin-left: 13px;
-
-      &:hover {
-        font-weight: 600;
-        text-decoration: underline;
-      }
-    }
   }
 
   &-btn {
@@ -707,6 +616,97 @@
       & a {
         color: $secondary-color;
       }
+    }
+  }
+}
+
+.post {
+  background-color: $primary-color;
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+
+  & img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    max-width: 585px;
+    width: 100%;
+  }
+
+  &-info {
+    padding: 10px 24px 22px 23px;
+  }
+
+  &-title {
+    font: {
+      family: $primary-font;
+      size: 18px;
+      weight: 700;
+    }
+
+    line-height: 25px;
+    color: #131b3c;
+  }
+
+  &-date {
+    font: {
+      family: $primary-font;
+      size: 12px;
+      weight: 400;
+    }
+
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #828282;
+  }
+
+  &-text {
+    font: {
+      family: $primary-font;
+      size: 16px;
+      weight: 400;
+    }
+
+    line-height: 26px;
+    letter-spacing: 0.01em;
+    color: #0B112A;
+    margin-bottom: 3px;
+    height: 78px;
+    overflow: hidden;
+  }
+
+  &-links {
+    display: flex;
+    justify-content: end;
+  }
+
+  &-link {
+    font: {
+      family: $primary-font;
+      size: 16px;
+      weight: 400;
+    }
+
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    color: #FF9900;
+
+    &+& {
+      text-decoration: underline;
+      margin-left: 13px;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &-more {
+    text-decoration: underline;
+    margin-left: 13px;
+
+    &:hover {
+      font-weight: 600;
+      text-decoration: underline;
     }
   }
 }
