@@ -1,0 +1,19 @@
+$primary-font: 'Montserrat',
+sans-serif;
+$secondary-font: 'OpenSansCondensed',
+sans-serif;
+
+$primary-color: #ffffff;
+$secondary-color: #0B112A;
+
+@mixin montserrat-osn {
+  font: {
+    family: $primary-font;
+    size: 16px;
+    weight: 400;
+  }
+
+  color:$primary-color;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
