@@ -268,229 +268,230 @@
       text-align: start;
     }
   }
+}
 
-  @media screen and (max-width: 550px) {
-    .welcome {
-      &__img {
-        width: 380px;
-        margin-bottom: 21px;
-      }
-
-      &__title {
-        font-size: 52px;
-        margin-bottom: 27px;
-      }
-
-      &__subtitle {
-        font-size: 23px;
-      }
-
-      &__btn-gr {
-        display: flex;
-        flex-direction: column;
-
-        & .welcome__btn-play {
-          font-size: 14px;
-          line-height: 25px;
-          padding: 8px 20px;
-        }
-
-        & .welcome__btn-real {
-          font-size: 14px;
-          line-height: 25px;
-          margin-top: 23px;
-          padding: 8px 12px;
-          margin-left: 0;
-        }
-      }
-
-      .why__title {
-        font-size: 37px;
-        line-height: 44px;
-      }
-
+@media screen and (max-width: 550px) {
+  .welcome {
+    &__img {
+      width: 380px;
+      margin-bottom: 21px;
     }
 
-    .table__title {
-      font-size: 37px;
-      line-height: 44px;
+    &__title {
+      font-size: 52px;
+      margin-bottom: 27px;
     }
 
-    .post__section-title {
-      font-size: 37px;
-      line-height: 44px;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .welcome {
-      &__img {
-        width: 284px;
-        margin-bottom: 14px;
-      }
-
-      &__title {
-        font-size: 38px;
-        margin-bottom: 23px;
-      }
-
-      &__subtitle {
-        font-size: 20px;
-        line-height: 28px;
-      }
+    &__subtitle {
+      font-size: 23px;
     }
 
-    .footer__row-comp {
-      display: none;
-    }
-
-    .footer__row-comp-mob {
+    &__btn-gr {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0 auto;
+      flex-direction: column;
 
-      & img {
-        margin-right: 30px;
-        margin-bottom: 27px;
+      & .welcome__btn-play {
+        font-size: 14px;
+        line-height: 25px;
+        padding: 8px 20px;
+      }
+
+      & .welcome__btn-real {
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 23px;
+        padding: 8px 12px;
+        margin-left: 0;
       }
     }
 
-    .footer__row-social {
-      margin: 0 auto;
-
-      & img {
-        transform: scale(0.8);
-      }
-
-      & p {
-        margin-right: 22px;
-      }
-    }
-
-    .footer__row-social a+a {
-      margin-left: 17px;
-    }
-
-    .footer__row-columns {
-      row-gap: 22px;
-      column-gap: 45px;
-    }
-
-    .footer__link-title,
-    .footer__link {
-      font-size: 12px;
-      line-height: 18px;
-    }
-
-    .footer__row-column {
-      width: 165px;
+    .why__title {
+      font-size: 37px;
+      line-height: 44px;
     }
 
   }
 
-  @media screen and (max-width: 450px) {
-    .welcome .why__title {
+  .table__title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
+  .post__section-title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .welcome {
+    &__img {
+      width: 284px;
+      margin-bottom: 14px;
+    }
+
+    &__title {
+      font-size: 38px;
+      margin-bottom: 23px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .footer__row-comp {
+    display: none;
+  }
+
+  .footer__row-comp-mob {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    & img {
+      margin-right: 30px;
+      margin-bottom: 27px;
+    }
+  }
+
+  .footer__row-social {
+    margin: 0 auto;
+
+    & img {
+      transform: scale(0.8);
+    }
+
+    & p {
+      margin-right: 22px;
+    }
+  }
+
+  .footer__row-social a+a {
+    margin-left: 17px;
+  }
+
+  .footer__row-columns {
+    row-gap: 22px;
+    column-gap: 45px;
+  }
+
+  .footer__link-title,
+  .footer__link {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .footer__row-column {
+    width: 165px;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .welcome .why__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .table {
+    &__title {
       font-size: 32px;
       line-height: 38px;
     }
 
-    .table {
-      &__title {
-        font-size: 32px;
-        line-height: 38px;
-      }
+    & td {
+      height: 63px;
 
-      & td {
-        height: 63px;
-
-        & img {
-          width: 47px;
-        }
-      }
-
-      &__bonus-inf {
-        font: {
-          size: 12px;
-          weight: 600;
-        }
-
-        line-height: 18px;
-        letter-spacing: 0.01em;
-      }
-
-      &__btn {
-        display: none;
-
-        &-mob {
-          display: block;
-        }
+      & img {
+        width: 47px;
       }
     }
 
-    .post {
-      max-width: 345px;
-
-      &-info {
-        padding: 10px 14px 26px 15px;
+    &__bonus-inf {
+      font: {
+        size: 12px;
+        weight: 600;
       }
 
-      &-title {
-        margin-bottom: 7px;
-      }
+      line-height: 18px;
+      letter-spacing: 0.01em;
     }
 
-    .post-text,
-    .post-links {
+    &__btn {
+      display: none;
+
+      &-mob {
+        display: block;
+      }
+    }
+  }
+
+  .post {
+    max-width: 345px;
+
+    &-info {
+      padding: 10px 14px 26px 15px;
+    }
+
+    &-title {
+      margin-bottom: 7px;
+    }
+  }
+
+  .post-text,
+  .post-links {
+    display: none;
+  }
+
+  .footer__row-columns {
+    column-gap: 0;
+  }
+
+  .footer__row-comp-mob img {
+    margin-right: 19px;
+  }
+
+  .footer__row-social p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .post {
+    max-width: 335px;
+  }
+
+  .post__section {
+    &-title {
+      margin-bottom: 7px;
+    }
+
+    &-info {
+      padding-bottom: 26px;
+    }
+
+    &-btn {
       display: none;
     }
+  }
+}
 
-    .footer__row-columns {
-      column-gap: 0;
-    }
-
-    .footer__row-comp-mob img {
-      margin-right: 19px;
-    }
-
-    .footer__row-social p {
-      font-size: 20px;
-      line-height: 24px;
-    }
+@media screen and (max-width: 359px) {
+  .welcome__title {
+    font-size: 32px;
+    margin-bottom: 8px;
   }
 
-  @media screen and (max-width: 375px) {
-    .post {
-      max-width: 335px;
-    }
-
-    .post__section {
-      &-title {
-        margin-bottom: 7px;
-      }
-
-      &-info {
-        padding-bottom: 26px;
-      }
-
-      &-btn {
-        display: none;
-      }
-    }
+  .post {
+    max-width: 300px;
   }
 
-  @media screen and (max-width: 359px) {
-    .welcome__title {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    .post {
-      max-width: 300px;
-    }
-
-    .footer__link-title,
-    .footer__link {
-      text-align: center;
-    }
+  .footer__link-title,
+  .footer__link {
+    text-align: center;
   }
+}

@@ -1,4 +1,10 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+const {
+    src,
+    dest,
+    watch,
+    parallel,
+    series
+} = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -21,9 +27,13 @@ function browsersync() {
 
 function styles() {
     return src('app/scss/style.scss')
-        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(scss({
+            outputStyle: 'compressed'
+        }))
         .pipe(concat('style.min.css'))
-        .pipe(scss({ outputStyle: 'expanded' }))
+        .pipe(scss({
+            outputStyle: 'expanded'
+        }))
         .pipe(concat('style.css'))
         .pipe(autoprefixer({
             overrideBrowserlist: ['last 10 version']
@@ -33,7 +43,11 @@ function styles() {
 }
 
 function scripts() {
-    return src('app/js/main.js')
+    return src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/rateyo/src/jquery.rateyo.js',
+            'app/js/main.js'
+        ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
@@ -43,13 +57,23 @@ function scripts() {
 function images() {
     return src('app/images/**/*.*')
         .pipe(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.mozjpeg({ quality: 75, progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.gifsicle({
+                interlaced: true
+            }),
+            imagemin.mozjpeg({
+                quality: 75,
+                progressive: true
+            }),
+            imagemin.optipng({
+                optimizationLevel: 5
+            }),
             imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
+                plugins: [{
+                        removeViewBox: true
+                    },
+                    {
+                        cleanupIDs: false
+                    }
                 ]
             })
         ]))
@@ -58,10 +82,12 @@ function images() {
 
 function build() {
     return src([
-        'app/**/*.html',
-        'app/css/style.min.css',
-        'app/js/main.min.js'
-    ], { base: 'app' })
+            'app/**/*.html',
+            'app/css/style.min.css',
+            'app/js/main.min.js'
+        ], {
+            base: 'app'
+        })
         .pipe(dest('dist'))
 }
 
