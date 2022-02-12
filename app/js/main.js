@@ -25,3 +25,10 @@ menuOpen.addEventListener('click', () => {
 menuClose.addEventListener('click', () => {
   menu.classList.remove('MobileMenu__inner--active');
 });
+
+let reviewMore = document.querySelector('.review__more-btn');
+let reviewTxt = document.querySelector('.review__block-text');
+
+reviewMore.addEventListener('click', () => {
+  reviewTxt.style.height = reviewTxt.style.height == 'auto' ? '407px' : 'auto';
+})

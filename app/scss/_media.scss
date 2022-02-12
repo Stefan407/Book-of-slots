@@ -63,6 +63,10 @@
   .MobileMenu {
     display: block;
   }
+
+  .top__page-inner {
+    padding-top: 108px;
+  }
 }
 
 @media screen and (max-width: 1177px) {
@@ -108,6 +112,10 @@
       margin-left: 0;
     }
   }
+
+  .casino__start-banner {
+    margin-bottom: 56px;
+  }
 }
 
 @media screen and (max-width: 880px) {
@@ -123,6 +131,49 @@
 
   .footer__row-column+.footer__row-column {
     margin-left: 0;
+  }
+
+  .review {
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__block {
+      &-text {
+        height: 407px;
+        overflow: hidden;
+      }
+    }
+
+    &__more-btn {
+      display: block;
+    }
+
+    &__atr {
+      margin-left: 0;
+
+      &-inner {
+        width: 100%;
+      }
+
+      &-row {
+        justify-content: flex-start;
+
+        &+&::before {
+          width: 100%;
+        }
+      }
+
+      &-info {
+        max-width: max-content;
+      }
+    }
+  }
+
+  .popular-slotty__title {
+    font-size: 40px;
+    line-height: 48px;
   }
 }
 
@@ -145,6 +196,57 @@
       gap: 50px;
     }
   }
+
+  .search-inp {
+    padding: 0 39px 0 17px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .breadcrumbs {
+    width: 100%;
+  }
+
+  .casino {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__info {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    &__start {
+      margin-bottom: 11.15px;
+
+      &-banner {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__bonus {
+      &-row {
+        background: transparent;
+        padding-bottom: 0;
+        margin-bottom: 23px;
+      }
+
+      &-claim {
+        width: 270px;
+      }
+
+      &-list {
+        width: 100%;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
 }
 
 @media screen and (max-width: 740px) {
@@ -236,6 +338,29 @@
 }
 
 @media screen and (max-width: 736px) {
+
+  .recent-bonus {
+    &__inner {
+      padding: 22px 23px 29px;
+    }
+
+    &__item {
+      margin-bottom: 12px;
+
+      &-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .comments__item-text {
+    left: 0;
+  }
+
+  .comments__item-prof {
+    flex-direction: column;
+  }
+
   .footer__row-columns {
     justify-content: center;
   }
@@ -268,7 +393,28 @@
       text-align: start;
     }
   }
+
+  .top__page-inner {
+    flex-direction: column;
+    align-items: start;
+    padding-bottom: 28px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 10px;
+  }
+
+
+  .popular-slotty__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .popular-slotty__items {
+    justify-content: space-evenly;
+  }
 }
+
 
 @media screen and (max-width: 550px) {
   .welcome {
@@ -339,6 +485,11 @@
       font-size: 20px;
       line-height: 28px;
     }
+  }
+
+  .review__block-title {
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .footer__row-comp {
@@ -427,6 +578,24 @@
         display: block;
       }
     }
+
+  }
+
+  .casino__bonus-btn {
+    width: 173px;
+    height: 41px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    margin-bottom: 7px;
+  }
+
+  .casino__bonus-more {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
   }
 
   .post {
@@ -446,6 +615,61 @@
     display: none;
   }
 
+  .casino {
+    &__info {
+      padding: 28px 19px 12px 10px;
+    }
+
+    &__bonus {
+
+      &-row {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+
+      &-col {
+        margin: 8px 0 29px;
+      }
+
+      &-claim {
+        margin: 0 auto;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &-inf+&-inf {
+        &::before {
+          top: -2px;
+        }
+      }
+
+      &-up,
+      &-txt,
+      &-list {
+        display: none;
+      }
+    }
+  }
+
+  .recent-bonus__item-time {
+    margin-right: 30px;
+  }
+
+  .popular-slotty__title {
+    text-align: left;
+  }
+
+  .popular-slotty__items {
+    justify-content: space-between;
+  }
+
+  .popular-slotty__btn {
+    background-color: #f90;
+  }
+
   .footer__row-columns {
     column-gap: 0;
   }
@@ -457,6 +681,42 @@
   .footer__row-social p {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .slot__card {
+    width: 162px;
+    height: 187px;
+
+    &-img {
+
+      img {
+        width: 160px;
+        height: 111px;
+      }
+    }
+
+    &-info {
+      padding: 14px 9px 17px 10px;
+    }
+
+    &-title {
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 16px;
+      height: 16px;
+      margin-bottom: 7px;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .star {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
@@ -476,6 +736,93 @@
 
     &-btn {
       display: none;
+    }
+  }
+
+  .casino {
+    margin-bottom: 36px;
+  }
+
+  .review {
+    padding-top: 34px;
+
+    & img {
+      display: none;
+    }
+
+    &__block {
+      &-left {
+        margin-top: 0;
+      }
+
+      &-title {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 28px;
+      }
+    }
+
+    &__atr {
+      background: none;
+      border: none;
+      margin-top: 0;
+
+      &-inner {
+        padding: 0;
+      }
+    }
+  }
+
+  .recent-bonus {
+    margin-top: 53px;
+  }
+
+  .recent-bonus__item-bottom {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .recent-bonus__item-time {
+    margin-right: 0;
+  }
+
+  .popular-slotty__items {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .slot__card {
+    width: 140px;
+    height: 187px;
+
+    &-img {
+
+      img {
+        width: 138px;
+        height: 111px;
+      }
+    }
+
+    &-info {
+      padding: 14px 9px 13px 10px;
+    }
+
+    &-title {
+      font-family: $secondary-font;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 16px;
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .star {
+      display: flex;
+      align-items: center;
     }
   }
 }
