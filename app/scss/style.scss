@@ -1521,6 +1521,9 @@
       margin-bottom: 18px;
 
       & img {
+        width: 82px;
+        height: 90px;
+        border-radius: 12px;
         margin-right: 19px;
       }
     }
@@ -1568,15 +1571,18 @@
       }
     }
 
-    &-text {
+    &-text p {
       position: relative;
       left: 102px;
+      padding-right: 97px;
+      font-weight: 400;
       font-size: 16px;
       line-height: 26px;
       letter-spacing: 0.01em;
       color: #000000;
+      text-overflow: ellipsis;
 
-      &+& {
+      &+p {
         margin-top: 12px;
       }
     }
@@ -1592,6 +1598,21 @@
         border: none;
       }
     }
+
+    &-more {
+      position: absolute;
+      right: 49px;
+      bottom: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      background-color: transparent;
+      color: #FF9900;
+      text-decoration: underline;
+      display: none;
+      cursor: pointer;
+    }
   }
 
   &-btn {
@@ -1605,6 +1626,21 @@
       color: inherit;
     }
   }
+  &-more{
+    display: none;
+    width: 173px;
+    height: 41px;
+    margin: 0 auto;
+    background-color: #FF9900;
+
+    & a {
+      color: inherit;
+    }
+  }
+}
+
+.jq-ry-container {
+  padding: 0;
 }
 
 .contact {
@@ -1636,26 +1672,27 @@
 
     &-box {
       display: flex;
-      justify-content: space-between;
 
       &-left {
 
         & img {
-          width: 288px;
+          width: 100%;
+          max-width: 288px;
           height: 71px;
+          margin-top: 47px;
         }
       }
 
       &-right {
+        width: 100%;
         margin-left: 50px;
       }
     }
 
     &-name {
-      margin-bottom: 36px;
       position: relative;
 
-      &::before {
+      &::after {
         content: url(../images/ico/profile-ico.svg);
         position: absolute;
         width: 14px;
@@ -1666,10 +1703,10 @@
     }
 
     &-mail {
-      margin-bottom: 48px;
+      margin-top: 36px;
       position: relative;
 
-      &::before {
+      &::after {
         content: url(../images/ico/mail-ico.svg);
         position: absolute;
         width: 14px;
@@ -1689,12 +1726,9 @@
       margin-bottom: 10px;
     }
 
-    &-label-mail {
-      margin-top: 36px;
-    }
-
     &-input {
       &-name {
+        position: relative;
         background-color: rgba(255, 255, 255, 0.15);
         border-radius: 6px;
         width: 337px;

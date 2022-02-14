@@ -175,6 +175,11 @@
     font-size: 40px;
     line-height: 48px;
   }
+
+  .comments__item-text p {
+    left: 0;
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -200,6 +205,10 @@
   .search-inp {
     padding: 0 39px 0 17px;
   }
+  
+  .contact__form-box-right {
+    margin-left: 25px;
+}
 }
 
 @media screen and (max-width: 820px) {
@@ -244,9 +253,73 @@
         }
       }
     }
+
+    &__items {
+      gap: 8px;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .comments__item-text {
+    max-height: 180px;
+    overflow: hidden;
+  }
+
+  .comments__item-like {
+    display: none;
+  }
+
+  .comments__item-more {
+    display: block;
+  }
+
+  .comments__item {
+    padding-bottom: 62px;
   }
 
 
+}
+
+@media screen and (max-width: 768px) {
+  .comments__item {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .contact {
+    &__form {
+      &-box {
+        flex-direction: column;
+
+        &-right {
+          margin: 13px 0 0px;
+        }
+      }
+
+      &-textarea {
+        max-width: 100%;
+      }
+
+      &-btn {
+        display: block;
+        margin: 0 auto;
+      }
+
+      &-input {
+        &-name {
+          width: 100%;
+        }
+
+        &-mail {
+          width: 100%;
+        }
+      }
+    }
+
+  }
 }
 
 @media screen and (max-width: 740px) {
@@ -353,10 +426,6 @@
     }
   }
 
-  .comments__item-text {
-    left: 0;
-  }
-
   .comments__item-prof {
     flex-direction: column;
   }
@@ -413,8 +482,19 @@
   .popular-slotty__items {
     justify-content: space-evenly;
   }
-}
 
+  .comments__item-prof-name {
+    font-size: 20px;
+  }
+
+  .comments__item-text p {
+    font-size: 14px;
+  }
+
+  .contact__form {
+    padding: 36px 35px 61px 35px;
+  }
+}
 
 @media screen and (max-width: 550px) {
   .welcome {
@@ -487,9 +567,12 @@
     }
   }
 
+  .comments-title,
+  .contact__title,
   .review__block-title {
     font-size: 40px;
     line-height: 48px;
+    text-align: left;
   }
 
   .footer__row-comp {
@@ -506,6 +589,33 @@
       margin-right: 30px;
       margin-bottom: 27px;
     }
+  }
+
+  .comments__inner {
+    padding-top: 49px;
+    padding-bottom: 56px;
+  }
+
+  .comments__items {
+    margin-bottom: 38px;
+  }
+
+  .comments__item {
+    padding-top: 18px;
+    padding-right: 29px;
+    padding-left: 28px;
+  }
+
+  .comments__item-more {
+    right: 30px;
+  }
+
+  .comments-btn {
+    display: none;
+  }
+
+  .comments-more {
+    display: block;
   }
 
   .footer__row-social {
@@ -624,7 +734,6 @@
 
       &-row {
         flex-wrap: wrap;
-        justify-content: space-between;
         margin-bottom: 0;
       }
 
@@ -741,6 +850,36 @@
 
   .casino {
     margin-bottom: 36px;
+
+    &__items {
+      gap: 5px;
+      margin-bottom: 19px;
+    }
+
+    &__item {
+      max-width: 70px;
+      height: 56px;
+    }
+
+    &__bonus-title {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .casino__bonus-inf+.casino__bonus-inf::before {
+    top: 6px;
+  }
+
+  .casino__item-num {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .casino__item {
+    font-size: 10px;
+    line-height: 13px;
   }
 
   .review {
@@ -774,7 +913,7 @@
   }
 
   .recent-bonus {
-    margin-top: 53px;
+    padding-top: 53px;
   }
 
   .recent-bonus__item-bottom {
@@ -789,9 +928,127 @@
   .popular-slotty__items {
     gap: 10px;
   }
+
+  .comments-title,
+  .contact__title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 28px;
+  }
+
+  .comments {
+    &__item {
+      padding: 18px 29px 62px 28px;
+
+      &-top img {
+        width: 56px;
+        height: 61px;
+      }
+
+      &-prof-name {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      &-prof-date {
+        font-size: 9px;
+        line-height: 13px;
+        letter-spacing: -0.02em;
+      }
+
+      &-text p {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+      }
+
+      &-star-block span {
+        display: none;
+      }
+    }
+
+    &-btn {
+      display: none;
+    }
+
+    &-more {
+      display: block;
+    }
+  }
+
+  .contact {
+    padding: 28px 0 64px;
+
+    &__form {
+      padding: 34px 29px 30px;
+
+      &-box {
+
+        &-left {
+          & img {
+            margin-top: 36px;
+          }
+        }
+
+        &-right {
+          margin-top: 36px;
+        }
+      }
+
+      &-name {
+        &::after {
+          top: 46px;
+        }
+      }
+
+      &-mail {
+        &::after {
+          top: 46px;
+        }
+      }
+
+      &-input {
+        &-name {
+          background: $primary-color;
+          padding-right: 13px;
+        }
+
+        &-mail {
+          background: $primary-color;
+          padding-right: 13px;
+        }
+      }
+
+      &-textarea {
+        background: $primary-color;
+        padding: 7px 13px;
+        margin-bottom: 33px;
+      }
+    }
+
+    & label {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &-mail {
+      margin-top: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 364px) {
+
+  .casino {
+    &__items {
+      gap: 5px;
+    }
+
+    &__item {
+      height: 46px;
+    }
+  }
+
   .slot__card {
     width: 140px;
     height: 187px;
