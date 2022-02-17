@@ -189,3 +189,55 @@ button {
     align-items: center;
   }
 }
+
+.page__404 {
+  background-image: url(../images/404-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+
+  &-inner {
+    padding: 146px 0 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  &-title {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 70px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFBF60;
+    max-width: 600px;
+    width: 100%;
+    z-index: 5;
+  }
+
+  &-subtitle {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 80px;
+    text-align: center;
+    color: $primary-color;
+    z-index: 5;
+  }
+
+  &-btn {
+    width: 165px;
+    height: 39px;
+    margin: 0 auto;
+    display: block;
+    z-index: 5;
+
+    & a {
+      color: $primary-color;
+    }
+  }
+}
