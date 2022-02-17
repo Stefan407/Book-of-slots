@@ -1,10 +1,4 @@
-const {
-    src,
-    dest,
-    watch,
-    parallel,
-    series
-} = require('gulp');
+const {src, dest, watch, parallel, series} = require('gulp');
 
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -31,10 +25,10 @@ function styles() {
             outputStyle: 'compressed'
         }))
         .pipe(concat('style.min.css'))
-        .pipe(scss({
-            outputStyle: 'expanded'
-        }))
-        .pipe(concat('style.css'))
+        // .pipe(scss({
+        //     outputStyle: 'expanded'
+        // }))
+        // .pipe(concat('style.css'))
         .pipe(autoprefixer({
             overrideBrowserlist: ['last 10 version']
         }))

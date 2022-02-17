@@ -7,6 +7,7 @@
   position: absolute;
   top: -3px;
   width: 100%;
+  z-index: 15;
 
   &::after {
     content: '';
@@ -146,6 +147,8 @@
 }
 
 .MobileMenu {
+  z-index: 15;
+
   &__inner {
     position: fixed;
     overflow: auto;
@@ -707,7 +710,9 @@
 }
 
 .top__page {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 
   &-inner {
     display: flex;
@@ -753,74 +758,20 @@
   }
 }
 
-.search {
-  max-width: 388px;
-  width: 100%;
-  height: 41px;
-  position: relative;
 
-  &-inp {
-    font: {
-      family: $primary-font;
-      size: 14px;
-      weight: 500;
-    }
-
-    line-height: 25px;
-    cursor: pointer;
-    max-width: 388px;
-    width: 100%;
-    height: 41px;
-    color: #000;
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 6px;
-    outline: 0;
-    text-overflow: ellipsis;
-    padding: 0 104px;
-
-    &[type=text]::placeholder {
-      color: #000;
-    }
-  }
-
-  &-btn {
-    cursor: pointer;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    right: 13px;
-    top: 6px;
-    border: none;
-    background-color: transparent;
-
-    & img {
-      width: 28px;
-      height: 28px;
-    }
-  }
-}
 
 .casino {
+  background-image: url(../images/casino-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   position: relative;
-  display: flex;
-
-  &::before {
-    content: '';
-    background-image: url(../images/casino-bg.png);
-    background-size: cover;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    top: -143px;
-  }
+  padding-top: 143px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 71px;
+    padding-bottom: 71px;
     position: relative;
   }
 
@@ -1114,15 +1065,17 @@
 }
 
 .line {
-  position: relative;
-  bottom: -10px;
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  right: 0;
   display: block;
   margin: 0 auto;
+  max-width: 997px;
   width: 100%;
 }
 
 .review {
-  position: relative;
   padding-top: 16px;
   background-color: #0B112A;
 
@@ -1485,6 +1438,7 @@
 
 .comments {
   background-image: url(../images/comments-bg.png);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
@@ -1652,6 +1606,7 @@
 
 .contact {
   background-image: url(..//images/contact-bg.png);
+  background-repeat: no-repeat;
   background-position: 45% bottom;
   background-size: cover;
   padding: 72px 0 67px;
@@ -1809,25 +1764,18 @@
 }
 
 .reviews {
+  background-image: url(../images/reviews-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   position: relative;
-  padding-top: 35px;
-
-  &::before {
-    content: '';
-    background-image: url(../images/reviews-bg.png);
-    background-size: cover;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    top: -58px;
-  }
+  padding-top: 151px;
+  z-index: 5;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 81px;
+    padding-bottom: 81px;
   }
 
   &__title {
@@ -1845,7 +1793,7 @@
     letter-spacing: 0.01em;
     margin-bottom: 12px;
 
-    .reviews__text {
+    .reviews__text+.reviews__text {
       margin-top: 12px;
     }
   }
@@ -1885,8 +1833,9 @@
     font-size: 24px;
     line-height: 30px;
     color: $primary-color;
-    margin-bottom: 35px;
     text-align: center;
+    max-width: 270px;
+    margin: 0 auto 35px;
   }
 
   &-card {
@@ -1968,11 +1917,16 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    padding: 68px 0 75px;
+    padding-top: 68px;
+    position: relative;
+
+    &-inner {
+      padding-bottom: 75px;
+    }
   }
 
   &__top {
-    margin-bottom: 71px;
+    margin-bottom: 41px;
   }
 
   &__top--title {
@@ -1988,24 +1942,24 @@
   &__top-cont {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 897px;
-    margin: 0 auto;
-  }
-
-  &__list-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 897px;
     margin: 0 auto;
 
     .casino__card {
       margin: 0 20px 30px 0;
     }
+  }
 
-    .casino__card:nth-child(5n) {
-      margin: 0 0 30px 0;
+  &__list-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-width: 897px;
+    margin: 0 auto;
+
+    .casino__card {
+      margin: 0 20px 30px 0;
     }
   }
 }
@@ -2013,7 +1967,7 @@
 .casino__card {
   position: relative;
   overflow: hidden;
-  width: 162px;
+  width: calc(20% - 16px);
   height: 206px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.125) -9.61%, rgba(255, 255, 255, 0) 100%), rgba(20, 38, 102, 0.25);
 
@@ -2025,7 +1979,9 @@
 
     .casino__card-btn {
       transform: translate(0, -50%);
+      width: calc(100% - 12.8px);
       z-index: 1;
+      background: #FF9900;
     }
 
     &::after {
@@ -2045,8 +2001,8 @@
     right: 0;
     top: 50%;
     margin: 0 auto;
-    width: 156px;
-    height: 39px;
+    width: 148.58px;
+    height: 37.15px;
     transform: translateY(300%);
     background: #FF9900;
   }
@@ -2148,6 +2104,9 @@
   border-top-left-radius: 80px;
   border-bottom-left-radius: 80px;
   padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &::before {
     content: url(../images/casino-star.png);
@@ -2181,6 +2140,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    & img {
+      max-width: 389px;
+      width: 100%;
+    }
   }
 
   &__text {
@@ -2207,6 +2171,10 @@
     text-transform: uppercase;
     color: $primary-color;
     margin-bottom: 43px;
+
+    & span {
+      white-space: nowrap;
+    }
   }
 
   &__items {
@@ -2223,10 +2191,11 @@
   text-transform: none;
   cursor: pointer;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  max-width: 590px;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 20px);
+  min-height: 94px;
   padding: 0 43px 0 49px;
   margin-bottom: 30px;
   border-radius: 12px;
@@ -2243,6 +2212,10 @@
     justify-content: space-between;
     align-items: center;
     min-height: 94px;
+
+    & img {
+      margin-left: 20px;
+    }
   }
 
   &-title {
@@ -2282,6 +2255,7 @@
 
 .footer {
   background-image: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: 19% bottom;
   filter: grayscale(1);
