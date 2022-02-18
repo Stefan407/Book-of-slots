@@ -1,22 +1,21 @@
 @media screen and (max-width: 1230px) {
-  .welcome {
-    .why {
-      &__text-items {
-        flex-direction: column;
-      }
+  .why {
+    &__text-items {
+      flex-direction: column;
+    }
 
-      &__text-item {
-        padding-bottom: 13px;
-        max-width: 100%;
-        margin: 0;
+    &__text-item {
+      padding-bottom: 13px;
+      max-width: 100%;
+      margin: 0;
 
-        &:nth-child(even) {
-          margin-left: 0;
-        }
+      &:nth-child(even) {
+        margin-left: 0;
       }
     }
   }
 }
+
 
 @media screen and (max-width: 1200px) {
   .header {
@@ -81,6 +80,10 @@
       padding-top: 166px;
     }
   }
+
+  .slots-month {
+    padding-top: 201.9px;
+  }
 }
 
 @media screen and (max-width: 1177px) {
@@ -118,6 +121,24 @@
   }
 }
 
+@media screen and (min-width: 1114px) {
+  .slots-month-items .free-slot__card {
+    width: calc(20% - 41px);
+  }
+}
+
+@media screen and (max-width: 1113px) and (min-width: 960px) {
+  .slots-month-items .free-slot__card {
+    width: calc(25% - 72px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(4n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (max-width: 1060px) {
   .footer__row-bottom {
     flex-direction: column-reverse;
@@ -129,6 +150,29 @@
 
   .casino__start-banner {
     margin-bottom: 56px;
+  }
+}
+
+@media screen and (max-width: 959px) and (min-width: 881px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 109px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 880px) and (min-width: 769px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 82px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -155,7 +199,7 @@
 
     &__block {
       &-text {
-        height: 407px;
+        height: 404px;
         overflow: hidden;
       }
 
@@ -246,14 +290,8 @@
     }
   }
 
-  .casino__list {
-    .line {
-      bottom: -8px;
-    }
-  }
-
   .line {
-    bottom: -10px;
+    top: -8px;
   }
 
   .reviews {
@@ -414,6 +452,30 @@
   .comments__item {
     padding-bottom: 62px;
   }
+
+  .blog__post-container .post {
+    width: calc(50% - 13px);
+  }
+
+  .blog__post-container .post:nth-child(3n) {
+    margin: 0 26px 30px 0;
+  }
+
+  .blog__post-container .post:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .casino__card:nth-child(5n) {
+    margin: 0 0 30px 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .casino__card:nth-child(5n) {
+    margin: 0 0 30px 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -424,7 +486,8 @@
   .review__block-title,
   .casino__top--title,
   .win__title,
-  .faqs__title {
+  .faqs__title,
+  .blog__title {
     font-size: 40px;
     line-height: 48px;
   }
@@ -486,7 +549,7 @@
   }
 
   .line {
-    bottom: -9px;
+    top: -7px;
   }
 
   .faqs {
@@ -542,13 +605,24 @@
     font-size: 23px;
     line-height: 24px;
   }
-}
 
-@media screen and (min-width: 769px) {
-  .casino__card:nth-child(5n) {
-    margin: 0 0 30px 0;
+  .blog__text {
+    display: block;
+
+    & p {
+      max-width: 100%;
+    }
+
+    & p+p {
+      margin: 20px 0 0;
+    }
+  }
+
+  .blog {
+    padding-top: 55px;
   }
 }
+
 
 @media screen and (max-width: 768px) and (min-width: 651px) {
   .casino__card:nth-child(4n) {
@@ -557,6 +631,27 @@
 
   .casino__card {
     width: calc(25% - 15px);
+  }
+
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 51px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 600px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 34px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -585,25 +680,6 @@
   }
 }
 
-@media screen and (max-width: 490px) {
-  .casino__card:nth-child(2n) {
-    margin: 0 0 30px 0;
-  }
-
-  .casino__card {
-    width: calc(50% - 10px);
-  }
-
-  .casino__top-cont {
-    justify-content: flex-start;
-  }
-
-  .reviews__list-li+.reviews__list-li {
-    margin-top: 10px;
-  }
-}
-
-
 @media screen and (max-width: 740px) {
   .welcome {
     &__inner {
@@ -623,13 +699,13 @@
     &__items {
       gap: 40px;
     }
+  }
 
-    .why__title {
-      font-size: 40px;
-      line-height: 48px;
-      text-align: start;
-      margin-bottom: 15px;
-    }
+  .why__title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 15px;
   }
 
   .table {
@@ -717,7 +793,7 @@
   }
 
   .line {
-    bottom: -7px;
+    top: -7px;
   }
 }
 
@@ -817,6 +893,53 @@
     font-size: 22px;
     line-height: 24px;
   }
+
+  .line {
+    top: -6px;
+  }
+
+  .slots-month__title {
+    margin-bottom: 37px;
+  }
+
+  .slots-month-items {
+    padding-bottom: 20px;
+  }
+
+  .slots-month {
+    padding-top: 215px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .blog__post-container-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__post-container-top .post {
+    width: 100%;
+    max-width: 100%;
+
+    &:nth-child(1n) {
+      margin-bottom: 34px;
+    }
+
+  }
+
+  .blog__post-container-top .post+.post {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .slots-month-items {
+    justify-content: center;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: calc(50% - 84px);
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -838,6 +961,7 @@
     &__btn-gr {
       display: flex;
       flex-direction: column;
+      padding-bottom: 71px;
 
       & .welcome__btn-play {
         font-size: 14px;
@@ -853,12 +977,11 @@
         margin-left: 0;
       }
     }
+  }
 
-    .why__title {
-      font-size: 37px;
-      line-height: 44px;
-    }
-
+  .why__title {
+    font-size: 37px;
+    line-height: 44px;
   }
 
   .table__title {
@@ -890,7 +1013,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 500px) {
   .welcome {
@@ -959,7 +1081,9 @@
   .review__block-title,
   .casino__top--title,
   .win__title,
-  .faqs__title {
+  .faqs__title,
+  .slots-month__title,
+  .blog__title {
     font-size: 36px;
     line-height: 40px;
   }
@@ -985,7 +1109,7 @@
   }
 
   .line {
-    bottom: -5px;
+    top: -4px;
   }
 
   .footer__row-social a+a {
@@ -1007,10 +1131,35 @@
     width: 165px;
   }
 
+  .slots-month-items .free-slot__card {
+    width: calc(50% - 34px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 40px 0;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .casino__card:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+
+  .casino__card {
+    width: calc(50% - 10px);
+  }
+
+  .casino__top-cont {
+    justify-content: flex-start;
+  }
+
+  .reviews__list-li+.reviews__list-li {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 450px) {
-  .welcome .why__title {
+  .welcome {
     font-size: 32px;
     line-height: 38px;
   }
@@ -1047,6 +1196,11 @@
       }
     }
 
+  }
+
+  .why__title {
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .casino__bonus-btn {
@@ -1131,7 +1285,9 @@
   .review__block-title,
   .casino__top--title,
   .win__title,
-  .faqs__title {
+  .faqs__title,
+  .blog__title,
+  .slots-month__title {
     text-align: left;
   }
 
@@ -1312,9 +1468,9 @@
   .popular-slotty__title,
   .review__block-title,
   .casino__top--title,
-  .comments-title,
   .win__title,
-  .faqs__title {
+  .faqs__title,
+  .blog__title {
     font-size: 32px;
     line-height: 38px;
   }
@@ -1534,6 +1690,40 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  .slots-month-items .free-slot__card {
+    width: calc(50% - 8px);
+  }
+
+  .slots-month-items .free-slot__card {
+    margin-right: 15px;
+  }
+
+  .blog__title {
+    margin-bottom: 13px;
+  }
+
+  .blog__text p+p {
+    margin-top: 12px;
+  }
+
+  .blog__text {
+    margin-bottom: 25px;
+  }
+
+  .blog__post-container {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .blog__post-container .post {
+    width: 100%;
+    margin: 0 0 34px 0;
+  }
+
+  .blog__post-container .post:nth-child(3n) {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 364px) {
@@ -1586,6 +1776,10 @@
 }
 
 @media screen and (max-width: 359px) {
+  .MobileMenu__inner {
+    width: 320px;
+  }
+
   .welcome__title {
     font-size: 32px;
     margin-bottom: 8px;
