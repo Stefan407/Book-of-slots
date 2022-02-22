@@ -16,7 +16,6 @@
   }
 }
 
-
 @media screen and (max-width: 1200px) {
   .header {
     top: 3px;
@@ -87,37 +86,36 @@
 }
 
 @media screen and (max-width: 1177px) {
-  .footer__row-top {
-    flex-direction: column;
-  }
+  .footer {
+    &__row-top {
+      flex-direction: column;
+      margin-bottom: 34px;
+    }
 
-  .footer__row-comp {
-    margin-bottom: 27px;
-  }
+    &__row-comp {
+      margin-bottom: 27px;
+    }
 
-  .footer__row-social {
-    margin-left: 0;
-  }
+    &__row-social {
+      margin-left: 0;
+    }
 
-  .footer__row-top {
-    margin-bottom: 34px;
-  }
+    &__row-columns {
+      width: 100%;
+      justify-content: space-between;
+    }
 
-  .footer__logo {
-    display: none;
-  }
+    &__row-column {
+      width: 196px;
 
-  .footer__row-columns {
-    width: 100%;
-    justify-content: space-between;
-  }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
 
-  .footer__row-column {
-    width: 196px;
-  }
-
-  .footer__row-column:last-child {
-    margin-right: 0px;
+    &__logo {
+      display: none;
+    }
   }
 }
 
@@ -192,7 +190,6 @@
   }
 
   .review {
-
     &__inner {
       flex-direction: column;
     }
@@ -325,28 +322,30 @@
     }
   }
 
-  .win__title {
-    padding-bottom: 25px;
-  }
-
-  .win__inner {
-    flex-direction: column;
-    align-items: center;
-
-    & img {
-      margin-bottom: 42px;
+  .win {
+    &__title {
+      padding-bottom: 25px;
     }
-  }
 
-  .win__text {
-    margin: 0;
+    &__inner {
+      flex-direction: column;
+      align-items: center;
 
-    & p {
+      & img {
+        margin-bottom: 42px;
+      }
+    }
+
+    &__text {
       margin: 0;
-    }
 
-    & p+p {
-      margin-top: 12px;
+      & p {
+        margin: 0;
+      }
+
+      & p+p {
+        margin-top: 12px;
+      }
     }
   }
 
@@ -436,39 +435,41 @@
     }
   }
 
-  .comments__item-text {
-    max-height: 180px;
-    overflow: hidden;
+  .comments {
+    &__item {
+      padding-bottom: 62px;
+
+      &-text {
+        max-height: 180px;
+        overflow: hidden;
+      }
+
+      &-like {
+        display: none;
+      }
+
+      &-more {
+        display: block;
+      }
+    }
   }
 
-  .comments__item-like {
-    display: none;
-  }
+  .blog {
+    &__post {
+      &-container {
+        .post {
+          width: calc(50% - 13px);
 
-  .comments__item-more {
-    display: block;
-  }
+          &:nth-child(3n) {
+            margin: 0 26px 30px 0;
+          }
 
-  .comments__item {
-    padding-bottom: 62px;
-  }
-
-  .blog__post-container .post {
-    width: calc(50% - 13px);
-  }
-
-  .blog__post-container .post:nth-child(3n) {
-    margin: 0 26px 30px 0;
-  }
-
-  .blog__post-container .post:nth-child(2n) {
-    margin: 0 0 30px 0;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .casino__card:nth-child(5n) {
-    margin: 0 0 30px 0;
+          &:nth-child(2n) {
+            margin: 0 0 30px 0;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -528,24 +529,26 @@
     }
   }
 
-  .reviews__title {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 42px;
-    color: #f90;
-    margin-bottom: 24px;
-  }
-
-  .reviews__text-block {
-    margin-bottom: 10px;
-
-    .reviews__text+.reviews__text {
-      margin-top: 10px;
+  .reviews {
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 42px;
+      color: #f90;
+      margin-bottom: 24px;
     }
-  }
 
-  .reviews__list-title {
-    margin-bottom: 11px;
+    &__text-block {
+      margin-bottom: 10px;
+
+      .reviews__text+.reviews__text {
+        margin-top: 10px;
+      }
+    }
+
+    &__list-title {
+      margin-bottom: 11px;
+    }
   }
 
   .line {
@@ -554,129 +557,133 @@
 
   .faqs {
     padding-top: 48px;
-  }
 
-  .faqs__item-title {
-    line-height: 24px;
-  }
+    &__item {
+      padding: 0 28px;
 
-  .faqs__item {
-    padding: 0 28px;
-  }
-
-  .adv-search__item {
-    flex-direction: column;
-
-    .slot__card {
-      margin-bottom: 22px;
-    }
-
-    .adv-search__item-wrapper {
-      margin: 0;
-      align-items: center;
-      width: 100%;
-    }
-
-    .adv-search__item+.adv-search__item {
-      margin-top: 87px;
-    }
-
-    .adv-search__item-name {
-      text-align: center;
-    }
-
-    .adv-search__item-info {
-      text-align: center;
-    }
-
-    .adv-search__item-feat {
-      text-align: center;
+      &-title {
+        line-height: 24px;
+      }
     }
   }
 
-  .page__404-title {
-    font-size: 55px;
-    line-height: 60px;
-    margin-bottom: 15px;
+  .adv-search {
+    &__item {
+      flex-direction: column;
+
+      .slot__card {
+        margin-bottom: 22px;
+      }
+
+      &-wrapper {
+        margin: 0;
+        align-items: center;
+        width: 100%;
+      }
+
+      &+& {
+        margin-top: 87px;
+      }
+
+      &-name {
+        text-align: center;
+      }
+
+      &-info {
+        text-align: center;
+      }
+
+      &-feat {
+        text-align: center;
+      }
+    }
   }
 
-  .page__404-subtitle {
-    font-weight: 700;
-    font-size: 23px;
-    line-height: 24px;
-  }
+  .page__404 {
+    &-title {
+      font-size: 55px;
+      line-height: 60px;
+      margin-bottom: 15px;
 
-  .blog__text {
-    display: block;
-
-    & p {
-      max-width: 100%;
+      &-subtitle {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 24px;
+      }
     }
 
-    & p+p {
-      margin: 20px 0 0;
-    }
-  }
+    .blog {
+      padding-top: 55px;
 
-  .blog {
-    padding-top: 55px;
+      &__text {
+        display: block;
+
+        & p {
+          max-width: 100%;
+        }
+
+        & p+p {
+          margin: 20px 0 0;
+        }
+      }
+    }
   }
 }
 
-
 @media screen and (max-width: 768px) and (min-width: 651px) {
-  .casino__card:nth-child(4n) {
-    margin: 0 0 30px 0;
-  }
-
   .casino__card {
     width: calc(25% - 15px);
+
+    &:nth-child(4n) {
+      margin: 0 0 30px 0;
+    }
   }
 
   .slots-month-items .free-slot__card {
     width: calc(33.33% - 51px);
     margin-bottom: 40px;
-  }
 
-  .slots-month-items .free-slot__card:nth-child(3n) {
-    margin-right: 0;
-    margin-bottom: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 
 @media screen and (max-width: 650px) and (min-width: 600px) {
   .slots-month-items .free-slot__card {
     width: calc(33.33% - 34px);
-  }
 
-  .slots-month-items .free-slot__card:nth-child(3n) {
-    margin-right: 0;
-    margin-bottom: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 
 @media screen and (max-width: 726px) {
-  .faqs__items {
-    flex-direction: column;
+  .faqs {
+    &__items {
+      flex-direction: column;
+    }
 
-  }
+    &__item {
+      width: 100%;
 
-  .faqs__item {
-    width: 100%;
-
-    &:last-child {
-      margin: 0;
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
 
 @media screen and (max-width: 650px) and (min-width: 491px) {
-  .casino__card:nth-child(3n) {
-    margin: 0 0 30px 0;
-  }
-
   .casino__card {
     width: calc(33.33% - 13.33px);
+
+    &:nth-child(3n) {
+      margin: 0 0 30px 0;
+    }
   }
 }
 
@@ -769,7 +776,6 @@
 }
 
 @media screen and (max-width: 736px) {
-
   .recent-bonus {
     &__inner {
       padding: 22px 23px 29px;
@@ -839,22 +845,27 @@
     padding-top: 212px;
   }
 
+  .popular-slotty {
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
 
-  .popular-slotty__title {
-    font-size: 32px;
-    line-height: 38px;
+      &__items {
+        justify-content: space-evenly;
+      }
+    }
   }
 
-  .popular-slotty__items {
-    justify-content: space-evenly;
-  }
+  .comments {
+    &__item {
+      &-prof-name {
+        font-size: 20px;
+      }
 
-  .comments__item-prof-name {
-    font-size: 20px;
-  }
-
-  .comments__item-text p {
-    font-size: 14px;
+      &-text p {
+        font-size: 14px;
+      }
+    }
   }
 
   .contact__form {
@@ -865,80 +876,98 @@
     padding-top: 200px;
   }
 
-  .search__container {
-    justify-content: flex-end;
-  }
+  .search {
+    &__container {
+      justify-content: flex-end;
 
-  .search__container .search {
-    margin: 32px 23px 31px;
-    margin-top: 32px;
+      .search {
+        margin: 32px 23px 31px;
+        margin-top: 32px;
 
-    .search-inp {
-      background: rgba(255, 255, 255, 1);
+        .search-inp {
+          background: rgba(255, 255, 255, 1);
+        }
+      }
     }
   }
 
-  .page__404-inner {
-    padding-top: 140px;
-  }
+  .page__404 {
+    &-inner {
+      padding-top: 140px;
 
-  .page__404-title {
-    font-size: 48px;
-    line-height: 60px;
-    margin-bottom: 7px;
-  }
+    }
 
-  .page__404-subtitle {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 24px;
-  }
+    &-title {
+      font-size: 48px;
+      line-height: 60px;
+      margin-bottom: 7px;
+    }
 
-  .line {
-    top: -6px;
-  }
+    &-subtitle {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 24px;
+    }
 
-  .slots-month__title {
-    margin-bottom: 37px;
-  }
-
-  .slots-month-items {
-    padding-bottom: 20px;
+    .line {
+      top: -6px;
+    }
   }
 
   .slots-month {
     padding-top: 215px;
+
+    &__title {
+      margin-bottom: 37px;
+    }
+
+    &-items {
+      padding-bottom: 20px;
+    }
   }
 }
 
 @media screen and (max-width: 617px) {
-  .blog__post-container-top {
-    flex-direction: column;
-    align-items: center;
-  }
+  .blog__post {
+    &-container {
+      &-top {
+        flex-direction: column;
+        align-items: center;
 
-  .blog__post-container-top .post {
-    width: 100%;
-    max-width: 100%;
+        .post {
+          width: 100%;
+          max-width: 100%;
 
-    &:nth-child(1n) {
-      margin-bottom: 34px;
+          &:nth-child(1n) {
+            margin-bottom: 34px;
+          }
+
+          &+& {
+            margin-left: 0;
+          }
+        }
+      }
     }
-
-  }
-
-  .blog__post-container-top .post+.post {
-    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 599px) {
   .slots-month-items {
     justify-content: center;
-  }
 
-  .slots-month-items .free-slot__card {
-    width: calc(50% - 84px);
+    & .free-slot__card {
+      width: calc(50% - 84px);
+    }
+  }
+  
+  .table{
+    &__btn {
+      display: none;
+
+      &-mob {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -994,17 +1023,19 @@
     line-height: 44px;
   }
 
-  .reviews__title {
-    font-size: 26px;
-    line-height: 33px;
-  }
-
   .top__casino-title {
     margin-bottom: 19px;
   }
 
-  .reviews__inner {
-    padding-bottom: 56px;
+  .reviews {
+    &__inner {
+      padding-bottom: 56px;
+
+      &__title {
+        font-size: 26px;
+        line-height: 33px;
+      }
+    }
   }
 
   .win__text {
@@ -1032,50 +1063,57 @@
     }
   }
 
-  .footer__row-comp {
-    display: none;
-  }
+  .footer {
+    &__row {
+      &-comp {
+        display: none;
+      }
 
-  .footer__row-comp-mob {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
+      &-mob {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
 
-    & img {
-      margin-right: 30px;
-      margin-bottom: 27px;
+        & img {
+          margin-right: 30px;
+          margin-bottom: 27px;
+        }
+      }
     }
   }
 
-  .comments__inner {
-    padding-top: 49px;
-    padding-bottom: 56px;
+  .comments {
+    &__inner {
+      padding-top: 49px;
+      padding-bottom: 56px;
+
+      &__items {
+        margin-bottom: 38px;
+      }
+
+      &__item {
+        padding-top: 18px;
+        padding-right: 29px;
+        padding-left: 28px;
+
+        &-more {
+          right: 30px;
+        }
+      }
+    }
+
+    &-btn {
+      display: none;
+    }
+
+    &-more {
+      display: block;
+    }
   }
 
-  .comments__items {
-    margin-bottom: 38px;
-  }
 
-  .comments__item {
-    padding-top: 18px;
-    padding-right: 29px;
-    padding-left: 28px;
-  }
-
-  .comments__item-more {
-    right: 30px;
-  }
-
-  .comments-btn {
-    display: none;
-  }
-
-  .comments-more {
-    display: block;
-  }
-
-  .comments-title,
+  .comments .comments-title,
   .contact__title,
   .popular-slotty__title,
   .review__block-title,
@@ -1088,23 +1126,48 @@
     line-height: 40px;
   }
 
-  .casino__list {
-    padding-top: 41px;
-  }
-
-  .casino__top--title {
-    margin-bottom: 27px;
-  }
-
-  .footer__row-social {
-    margin: 0 auto;
-
-    & img {
-      transform: scale(0.8);
+  .casino {
+    &__list {
+      padding-top: 41px;
     }
 
-    & p {
-      margin-right: 22px;
+    &__top--title {
+      margin-bottom: 27px;
+    }
+  }
+
+  .footer {
+    &__row {
+      &-social {
+        margin: 0 auto;
+
+        & img {
+          transform: scale(0.8);
+        }
+
+        & p {
+          margin-right: 22px;
+        }
+
+        & a+a {
+          margin-left: 17px;
+        }
+      }
+
+      &-columns {
+        row-gap: 22px;
+        column-gap: 45px;
+      }
+
+      &-column {
+        width: 165px;
+      }
+
+      .footer__link-title,
+      .footer__link {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -1112,41 +1175,22 @@
     top: -4px;
   }
 
-  .footer__row-social a+a {
-    margin-left: 17px;
-  }
-
-  .footer__row-columns {
-    row-gap: 22px;
-    column-gap: 45px;
-  }
-
-  .footer__link-title,
-  .footer__link {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .footer__row-column {
-    width: 165px;
-  }
-
   .slots-month-items .free-slot__card {
     width: calc(50% - 34px);
-  }
 
-  .slots-month-items .free-slot__card:nth-child(2n) {
-    margin: 0 0 40px 0;
+    &:nth-child(2n) {
+      margin: 0 0 40px 0;
+    }
   }
 }
 
 @media screen and (max-width: 490px) {
-  .casino__card:nth-child(2n) {
-    margin: 0 0 30px 0;
-  }
-
   .casino__card {
     width: calc(50% - 10px);
+
+    &:nth-child(2n) {
+      margin: 0 0 30px 0;
+    }
   }
 
   .casino__top-cont {
@@ -1187,15 +1231,6 @@
       line-height: 18px;
       letter-spacing: 0.01em;
     }
-
-    &__btn {
-      display: none;
-
-      &-mob {
-        display: block;
-      }
-    }
-
   }
 
   .why__title {
@@ -1203,21 +1238,23 @@
     line-height: 38px;
   }
 
-  .casino__bonus-btn {
-    width: 173px;
-    height: 41px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 25px;
-    letter-spacing: -0.02em;
-    margin-bottom: 7px;
-  }
+  .casino__bonus {
+    &-btn {
+      width: 173px;
+      height: 41px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 25px;
+      letter-spacing: -0.02em;
+      margin-bottom: 7px;
 
-  .casino__bonus-more {
-    font-size: 12px;
-    line-height: 18px;
-    letter-spacing: 0.01em;
+      &-more {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+      }
+    }
   }
 
   .post {
@@ -1291,25 +1328,31 @@
     text-align: left;
   }
 
-  .popular-slotty__items {
-    justify-content: space-between;
+  .popular-slotty {
+    &__items {
+      justify-content: space-between;
+
+      &__btn {
+        background-color: #f90;
+      }
+    }
   }
 
-  .popular-slotty__btn {
-    background-color: #f90;
-  }
+  .footer {
+    &__row {
+      &-columns {
+        column-gap: 15px;
+      }
 
-  .footer__row-columns {
-    column-gap: 0;
-  }
+      &-comp-mob img {
+        margin-right: 19px;
+      }
 
-  .footer__row-comp-mob img {
-    margin-right: 19px;
-  }
-
-  .footer__row-social p {
-    font-size: 20px;
-    line-height: 24px;
+      &-social p {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
   }
 
   .slot__card {
@@ -1348,18 +1391,22 @@
     }
   }
 
-  .adv-search__title {
-    font-size: 20px;
-    line-height: 24px;
-  }
+  .adv-search {
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
 
-  .adv-search__item-name {
-    margin-bottom: 7px;
-  }
+    &__item {
+      &-name {
+        margin-bottom: 7px;
+      }
 
-  .adv-search__item-feat {
-    height: auto;
-    margin-bottom: 21px;
+      &-feat {
+        height: auto;
+        margin-bottom: 21px;
+      }
+    }
   }
 }
 
@@ -1391,72 +1438,73 @@
     }
 
     &__item {
+      font-size: 10px;
+      line-height: 13px;
       max-width: 70px;
       height: 56px;
-    }
 
-    &__bonus-title {
-      font-size: 14px;
-      line-height: 24px;
-      margin-bottom: 8px;
-    }
-  }
-
-  .casino__bonus-inf+.casino__bonus-inf::before {
-    top: 6px;
-  }
-
-  .casino__item-num {
-    font-size: 20px;
-    line-height: 24px;
-  }
-
-  .casino__item {
-    font-size: 10px;
-    line-height: 13px;
-  }
-
-  .review {
-    padding-top: 34px;
-
-    & img {
-      display: none;
-    }
-
-    &__block {
-      &-left {
-        margin-top: 0;
+      &-num {
+        font-size: 20px;
+        line-height: 24px;
       }
+    }
 
+    &__bonus {
       &-title {
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 28px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 8px;
       }
-    }
 
-    &__atr {
-      background: none;
-      border: none;
-      margin-top: 0;
+      &-inf+.casino__bonus-inf::before {
+        top: 6px;
+      }
 
-      &-inner {
-        padding: 0;
+      .review {
+        padding-top: 34px;
+
+        & img {
+          display: none;
+        }
+
+        &__block {
+          &-left {
+            margin-top: 0;
+          }
+
+          &-title {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 28px;
+          }
+        }
+
+        &__atr {
+          background: none;
+          border: none;
+          margin-top: 0;
+
+          &-inner {
+            padding: 0;
+          }
+        }
       }
     }
   }
 
   .recent-bonus {
     padding-top: 53px;
-  }
 
-  .recent-bonus__item-bottom {
-    flex-direction: column;
-    align-items: start;
-  }
+    &__item {
+      &-bottom {
+        flex-direction: column;
+        align-items: start;
+      }
 
-  .recent-bonus__item-time {
-    margin-right: 0;
+      &-time {
+        margin-right: 0;
+      }
+    }
   }
 
   .popular-slotty__items {
@@ -1475,11 +1523,11 @@
     line-height: 38px;
   }
 
-  .comments-title {
-    margin-bottom: 22px;
-  }
-
   .comments {
+    &-title {
+      margin-bottom: 22px;
+    }
+
     &__item {
       padding: 18px 29px 62px 28px;
 
@@ -1579,16 +1627,18 @@
     }
   }
 
-  .reviews__title {
-    font-size: 20px;
-    line-height: 24px;
-  }
+  .reviews {
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+    }
 
-  .reviews__text-block,
-  .reviews__list-title,
-  .reviews__list-li {
-    font-size: 12px;
-    line-height: 18px;
+    &__text-block,
+    &__list-title,
+    &__list-li {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   .top__casino-title {
@@ -1596,14 +1646,13 @@
     line-height: 24px;
   }
 
-
   .casino__card {
     height: 203px;
-  }
 
-  .casino__card-inner {
-    height: 203px;
-    padding: 19px 10px 10px;
+    &-inner {
+      height: 203px;
+      padding: 19px 10px 10px;
+    }
   }
 
   .casino__list {
@@ -1639,95 +1688,101 @@
 
   .adv-search {
     padding-bottom: 54px;
-  }
 
-  .adv-search__item .slot__card {
-    width: 162px;
-    height: 185px;
-  }
+    &__item {
+      .slot__card {
+        width: 162px;
+        height: 185px;
+      }
 
-  .adv-search__item-name {
-    font-size: 16px;
-    line-height: 24px;
-  }
+      &-name {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
-  .adv-search__item-info {
-    font-size: 12px;
-    line-height: 18px;
-  }
+      &-info {
+        font-size: 12px;
+        line-height: 18px;
+      }
 
-  .adv-search__item-feat {
-    font-size: 12px;
-    line-height: 18px;
-  }
+      &-feat {
+        font-size: 12px;
+        line-height: 18px;
+      }
 
-  .adv-search__item-btn {
-    max-width: 173px;
-    width: 100%;
-    height: 41px;
-  }
+      &-btn {
+        max-width: 173px;
+        width: 100%;
+        height: 41px;
+      }
 
-  .adv-search__item-char+.adv-search__item-char::before {
-    top: 2px;
+      &-char {
+        &+&::before {
+          top: 2px;
+        }
+      }
+    }
   }
 
   .page__404 {
     background-image: url(../images/404-bg-mob.png);
     background-position: center top;
+
+    &-inner {
+      padding: 125px 0 51px;
+    }
+
+    &-title {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 25px;
+    }
+
+    &-subtitle {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
-  .page__404-inner {
-    padding: 125px 0 51px;
-  }
-
-  .page__404-title {
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 25px;
-  }
-
-  .page__404-subtitle {
-    font-size: 20px;
-    line-height: 24px;
-  }
 
   .slots-month-items .free-slot__card {
     width: calc(50% - 8px);
-  }
-
-  .slots-month-items .free-slot__card {
     margin-right: 15px;
   }
 
-  .blog__title {
-    margin-bottom: 13px;
-  }
 
-  .blog__text p+p {
-    margin-top: 12px;
-  }
+  .blog {
+    &__title {
+      margin-bottom: 13px;
+    }
 
-  .blog__text {
-    margin-bottom: 25px;
-  }
+    & p+p {
+      margin-top: 12px;
+    }
 
-  .blog__post-container {
-    flex-flow: column wrap;
-    align-items: center;
-  }
+    &__text {
+      margin-bottom: 25px;
+    }
 
-  .blog__post-container .post {
-    width: 100%;
-    margin: 0 0 34px 0;
-  }
+    &__post {
+      &-container {
+        flex-flow: column wrap;
+        align-items: center;
 
-  .blog__post-container .post:nth-child(3n) {
-    margin-right: 0;
+        .post {
+          width: 100%;
+          margin: 0 0 34px 0;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 364px) {
-
   .casino {
     &__items {
       gap: 5px;
@@ -1771,8 +1826,6 @@
       align-items: center;
     }
   }
-
-
 }
 
 @media screen and (max-width: 359px) {
@@ -1789,22 +1842,31 @@
     max-width: 300px;
   }
 
-  .footer__link-title,
-  .footer__link {
-    text-align: center;
+  .footer {
+
+    &__link-title,
+    &__link {
+      text-align: center;
+    }
   }
 
-  .adv-search__item-info {
-    font-size: 11px;
-    line-height: 15px;
-  }
+  .adv-search {
+    &__item {
+      &-info {
+        font-size: 11px;
+        line-height: 15px;
+      }
 
-  .adv-search__item-feat {
-    font-size: 11px;
-    line-height: 15px;
-  }
+      &-feat {
+        font-size: 11px;
+        line-height: 15px;
+      }
 
-  .adv-search__item-char+.adv-search__item-char::before {
-    top: 0px;
+      &-char {
+        &+&::before {
+          top: 0px;
+        }
+      }
+    }
   }
 }

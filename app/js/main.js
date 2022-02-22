@@ -45,10 +45,9 @@ $(function () {
   });
 });
 
-let menuOpen = document.querySelector('.header__menu-open');
-let menuClose = document.querySelector('.MobileMenu__close');
-let menu = document.querySelector('.MobileMenu__inner');
-
+const menuOpen = document.querySelector('.header__menu-open');
+const menuClose = document.querySelector('.MobileMenu__close');
+const menu = document.querySelector('.MobileMenu__inner');
 
 menuOpen.addEventListener('click', () => {
   menu.classList.add('MobileMenu__inner--active');
@@ -58,8 +57,8 @@ menuClose.addEventListener('click', () => {
   menu.classList.remove('MobileMenu__inner--active');
 });
 
-let reviewMore = document.querySelector('.review__more-btn');
-let reviewTxt = document.querySelector('.review__block-text');
+const reviewMore = document.querySelector('.review__more-btn');
+const reviewTxt = document.querySelector('.review__block-text');
 
 reviewMore.addEventListener('click', () => {
   reviewTxt.classList.toggle('review__block-text--active');
@@ -73,16 +72,3 @@ faqs.forEach((faq) => {
     faq.classList.toggle('open');
   });
 });
-
-// faqs.forEach((faq) => {
-//   faq.addEventListener('click', () => {
-//     faq.classList.toggle('active');
-//   });
-
-//   faq.addEventListener('click', () => {
-//     faqsInfo.forEach((inf) => {
-//       inf.style.display = inf.style.display === 'block' ? 'none' : 'block';
-//       faq.style.flexDirection = faq.style.flexDirection === 'column' ? 'row' : 'column';
-//     });
-//   });
-// });
