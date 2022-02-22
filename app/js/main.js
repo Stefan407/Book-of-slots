@@ -60,9 +60,11 @@ menuClose.addEventListener('click', () => {
 const reviewMore = document.querySelector('.review__more-btn');
 const reviewTxt = document.querySelector('.review__block-text');
 
-reviewMore.addEventListener('click', () => {
-  reviewTxt.classList.toggle('review__block-text--active');
-});
+if (reviewMore.style.display == "none") {
+  reviewMore.addEventListener('click', () => {
+    reviewTxt.classList.toggle('review__block-text--active');
+  });
+}
 
 const faqs = document.querySelectorAll('.faqs__item');
 const faqsInfo = document.querySelectorAll('.faqs__item-info');
