@@ -493,6 +493,56 @@
     line-height: 48px;
   }
 
+  .table {
+
+    &__title {
+      font-size: 40px;
+      line-height: 48px;
+      text-align: start;
+      margin-bottom: 31px;
+    }
+
+    &__review {
+      display: none;
+
+      &-inf {
+        display: none;
+      }
+    }
+
+    &__games {
+      display: none;
+
+      &-inf {
+        display: none;
+      }
+    }
+
+    &__deposit {
+      display: none;
+
+      &-inf {
+        display: none;
+      }
+    }
+
+    &__play {
+      border-radius: 2px 12px 2px 2px;
+
+      &-inf {
+        border-radius: 2px 2px 12px 2px !important;
+      }
+    }
+
+    table tr:last-child td:first-child {
+      border-bottom-left-radius: 10px;
+    }
+
+    tbody {
+      margin: 0 auto;
+    }
+  }
+
   .comments__item {
     padding-left: 50px;
     padding-right: 50px;
@@ -628,6 +678,38 @@
       }
     }
   }
+
+  .post-page {
+    &>div {
+      &>div {
+        flex-direction: column;
+
+        &>div {
+          &>div+img+div+div {
+            justify-content: center;
+            gap: 15px 15px;
+          }
+        }
+
+        &>aside {
+          margin-left: 0;
+          max-width: 100%;
+          width: auto;
+
+          &>div {
+            &>div {
+              max-width: 100%;
+              width: auto;
+
+              &+div::before {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 651px) {
@@ -713,56 +795,6 @@
     line-height: 48px;
     text-align: start;
     margin-bottom: 15px;
-  }
-
-  .table {
-
-    &__title {
-      font-size: 40px;
-      line-height: 48px;
-      text-align: start;
-      margin-bottom: 31px;
-    }
-
-    &__review {
-      display: none;
-
-      &-inf {
-        display: none;
-      }
-    }
-
-    &__games {
-      display: none;
-
-      &-inf {
-        display: none;
-      }
-    }
-
-    &__deposit {
-      display: none;
-
-      &-inf {
-        display: none;
-      }
-    }
-
-    &__play {
-      border-radius: 2px 12px 2px 2px;
-
-      &-inf {
-        border-radius: 2px 2px 12px 2px !important;
-      }
-    }
-
-    table tr:last-child td:first-child {
-      border-bottom-left-radius: 10px;
-    }
-
-    tbody {
-      margin: 0 auto;
-    }
   }
 
   .post__section {
@@ -957,16 +989,6 @@
 
     & .free-slot__card {
       width: calc(50% - 84px);
-    }
-  }
-  
-  .table{
-    &__btn {
-      display: none;
-
-      &-mob {
-        display: inline-block;
-      }
     }
   }
 }
@@ -1231,6 +1253,14 @@
       line-height: 18px;
       letter-spacing: 0.01em;
     }
+
+    &__btn {
+      display: none;
+
+      &-mob {
+        display: inline-block;
+      }
+    }
   }
 
   .why__title {
@@ -1422,10 +1452,6 @@
 
     &-info {
       padding-bottom: 26px;
-    }
-
-    &-btn {
-      display: none;
     }
   }
 

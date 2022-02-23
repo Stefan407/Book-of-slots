@@ -60,8 +60,13 @@ menuClose.addEventListener('click', () => {
 const reviewMore = document.querySelector('.review__more-btn');
 const reviewTxt = document.querySelector('.review__block-text');
 
-if (reviewMore.style.display == "none") {
+if (reviewMore && reviewTxt) {
   reviewMore.addEventListener('click', () => {
+    if (reviewMore.innerHTML === "Read More") {
+      reviewMore.innerHTML = "Short";
+    } else {
+      reviewMore.innerHTML = "Read More";
+    }
     reviewTxt.classList.toggle('review__block-text--active');
   });
 }

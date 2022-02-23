@@ -555,11 +555,14 @@
 
     line-height: 25px;
     text-transform: capitalize;
-    padding: 7px 45px 8px 46px;
-
-    & a {
-      color: $primary-color;
-    }
+    max-width: 161px;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: $primary-color;
   }
 
   &__btn-mob {
@@ -605,28 +608,25 @@
     grid-gap: 30px 31px;
     justify-content: space-around;
     grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    margin-bottom: 80px;
   }
 
-  &-btn {
-    font: {
-      family: $primary-font;
-      size: 16px;
-      weight: 600;
-    }
+  & div {
+    text-align: center;
 
-    line-height: 25px;
-    padding: 7px 24px;
-    display: block;
-    margin: 48px auto auto;
-    text-transform: capitalize;
+    &-btn {
+      font: {
+        family: $primary-font;
+        size: 16px;
+        weight: 600;
+      }
 
-    & a {
+      line-height: 25px;
+      text-transform: capitalize;
       color: $primary-color;
-    }
 
-    &:hover {
-      & a {
-        color: $secondary-color;
+      &:hover {
+        background: #FF9900;
       }
     }
   }
@@ -2361,8 +2361,9 @@
 
         &>p+div+ul {
           list-style: disc;
-          position: relative;
-          left: 20px;
+          padding-inline-start: 17px;
+          max-width: 760px;
+          width: 100%;
           margin-bottom: 29px;
 
           &>li {
@@ -2378,8 +2379,8 @@
         }
       }
 
-      &>img {
-        max-width: 759px;
+      &>div>img {
+        max-width: 769px;
         width: 100%;
         max-height: 413px;
         margin-bottom: 45px;
@@ -2433,15 +2434,12 @@
       &>div>div+img+div+div {
         display: flex;
         flex-flow: row wrap;
+        column-gap: 15px;
         margin-bottom: 45px;
 
         &>div {
           width: 181px;
           height: 181px;
-        }
-
-        &>div+div {
-          margin-left: 15px;
         }
       }
 
@@ -2481,12 +2479,16 @@
           line-height: 26px;
           letter-spacing: 0.01em;
           color: #8289A4;
-          width: 102px;
+          max-width: 102px;
+          width: 100%;
           margin-bottom: 0;
         }
 
         &>div {
           margin-bottom: 0;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 15px;
 
           &>p {
             font-family: $secondary-font;
@@ -2499,10 +2501,8 @@
             color: #FFFFFF;
             background-color: #8289A4;
             border-radius: 6px;
-
-            &+p {
-              margin-left: 15px;
-            }
+            display: flex;
+            align-items: center;
           }
         }
       }
@@ -2518,12 +2518,16 @@
           line-height: 26px;
           letter-spacing: 0.01em;
           color: #8289A4;
-          width: 102px;
+          max-width: 102px;
+          width: 100%;
           margin-bottom: 0;
         }
 
         &>div {
           margin-bottom: 0;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          gap: 15px;
 
           &>p {
             font-family: $secondary-font;
@@ -2536,10 +2540,8 @@
             color: #FFFFFF;
             background-color: #8289A4;
             border-radius: 6px;
-
-            &+p {
-              margin-left: 15px;
-            }
+            display: flex;
+            align-items: center;
           }
         }
       }
@@ -2626,7 +2628,7 @@
         margin-left: 44px;
         max-width: 385px;
         width: 100%;
-        max-height: 733px;
+        height: 100%;
 
         &::before {
           content: '';
@@ -2653,18 +2655,22 @@
             margin-bottom: 28px;
           }
 
-          &>div+div::before {
-            content: '';
-            position: absolute;
-            top: -30px;
-            max-width: 273px;
-            width: 100%;
-            height: 1px;
-            background: #8289A4;
-            margin-bottom: 28px;
+          &>div+div {
+            margin-top: 61px;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: -30px;
+              max-width: 273px;
+              width: 100%;
+              height: 1px;
+              background: #8289A4;
+              margin-bottom: 28px;
+            }
           }
 
-          &>h4+div {
+          &>div {
             position: relative;
             max-width: 295px;
             width: 100%;
@@ -2674,6 +2680,7 @@
               font-size: 18px;
               line-height: 25px;
               margin-bottom: 10px;
+              min-height: 75px;
             }
 
             &>p+p {
@@ -2682,73 +2689,8 @@
               line-height: 20px;
               letter-spacing: 0.01em;
               color: #8289A4;
-              margin-bottom: 61px;
-            }
-          }
-
-          &>h4+div+div {
-            position: relative;
-            max-width: 295px;
-            width: 100%;
-
-            &>p {
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 25px;
-              margin-bottom: 10px;
-            }
-
-            &>p+p {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 20px;
-              letter-spacing: 0.01em;
-              color: #8289A4;
-              margin-bottom: 61px;
-            }
-          }
-
-          &>h4+div+div+div {
-            position: relative;
-            max-width: 295px;
-            width: 100%;
-
-            &>p {
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 25px;
-              margin-bottom: 10px;
-            }
-
-            &>p+p {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 20px;
-              letter-spacing: 0.01em;
-              color: #8289A4;
-              margin-bottom: 61px;
-            }
-          }
-
-          &>h4+div+div+div+div {
-            position: relative;
-            max-width: 295px;
-            width: 100%;
-
-            &>p {
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 25px;
-              margin-bottom: 10px;
-            }
-
-            &>p+p {
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 20px;
-              letter-spacing: 0.01em;
-              color: #8289A4;
-              margin-bottom: 61px;
+              margin-bottom: 0;
+              min-height: 100%;
             }
           }
         }
