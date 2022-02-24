@@ -1126,8 +1126,8 @@
     font-size: 12px;
     line-height: 18px;
     letter-spacing: -0.02em;
-    
-    &+&{
+
+    &+& {
       margin-top: 5px;
     }
   }
@@ -1153,8 +1153,7 @@
 
   .footer {
     &__row {
-      &-comp {
-      }
+      &-comp {}
 
       &-mob {
         display: flex;
