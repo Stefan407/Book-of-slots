@@ -1,5 +1,7 @@
 @media screen and (max-width: 1230px) {
   .why {
+    padding-top: 112px;
+
     &__text-items {
       flex-direction: column;
     }
@@ -18,7 +20,15 @@
 
 @media screen and (max-width: 1200px) {
   .header {
-    top: 3px;
+    height: 96px;
+
+    &__logo {
+      height: 96px;
+
+      &-img {
+        height: 96px;
+      }
+    }
 
     &::after {
       height: 96px;
@@ -58,20 +68,16 @@
     }
   }
 
+  .top__page {
+    padding-top: 108px;
+  }
+
   .MobileMenu {
     display: block;
   }
 
-  .top__page-inner {
-    padding-top: 108px;
-  }
-
   .casino {
-    padding-top: 164px;
-  }
-
-  .reviews {
-    padding-top: 162px;
+    padding-top: 179px;
   }
 
   .page__404 {
@@ -102,12 +108,11 @@
 
     &__row-columns {
       width: 100%;
+      gap: 0;
       justify-content: space-between;
     }
 
     &__row-column {
-      width: 196px;
-
       &:last-child {
         margin-right: 0px;
       }
@@ -358,11 +363,12 @@
   .welcome {
     &__img {
       width: 595px;
+      margin-bottom: 25px;
     }
 
     &__title {
       font-size: 79px;
-      margin-bottom: 45px;
+      margin-bottom: 38px;
     }
 
     &__subtitle {
@@ -710,6 +716,22 @@
       }
     }
   }
+
+  .footer {
+    &__row {
+      &-columns {
+        display: grid;
+        justify-items: center;
+        gap: 33px;
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+      &-column {
+        width: 196px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 651px) {
@@ -771,18 +793,23 @@
 
 @media screen and (max-width: 740px) {
   .welcome {
-    &__inner {
-      padding-top: 181px;
-    }
-
     &__img {
       width: 490px;
-      margin-bottom: 27px;
+      margin-bottom: 16px;
     }
 
     &__title {
       font-size: 65px;
-      margin-bottom: 45px;
+    }
+
+    &__text {
+      font-size: 22px;
+      line-height: 28px;
+
+      & span {
+        font-size: 22px;
+        line-height: 28px;
+      }
     }
 
     &__items {
@@ -790,11 +817,15 @@
     }
   }
 
-  .why__title {
-    font-size: 40px;
-    line-height: 48px;
-    text-align: start;
-    margin-bottom: 15px;
+  .why {
+    padding: 77px 0 58.88px;
+
+    &__title {
+      font-size: 40px;
+      line-height: 48px;
+      text-align: start;
+      margin-bottom: 15px;
+    }
   }
 
   .post__section {
@@ -837,19 +868,31 @@
 
 @media screen and (max-width: 650px) {
   .welcome {
+    &__inner {
+      padding-top: 150px;
+    }
+
     &__img {
       width: 427px;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
 
     &__title {
       font-size: 58px;
-      margin-bottom: 27px;
+    }
+
+    &__text {
+      font-size: 20px;
+
+      & span {
+        font-size: 20px;
+      }
     }
 
     &__items {
       gap: 23px;
       flex-direction: column;
+      margin-bottom: 50px;
     }
 
     &__item p {
@@ -866,7 +909,6 @@
   .top__page-inner {
     flex-direction: column;
     align-items: start;
-    padding-bottom: 28px;
   }
 
   .breadcrumbs {
@@ -874,7 +916,7 @@
   }
 
   .casino {
-    padding-top: 212px;
+    padding-top: 215px;
   }
 
   .popular-slotty {
@@ -960,6 +1002,16 @@
 }
 
 @media screen and (max-width: 617px) {
+  .welcome {
+    &__img {
+      margin-bottom: 9px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
   .blog__post {
     &-container {
       &-top {
@@ -996,13 +1048,11 @@
 @media screen and (max-width: 550px) {
   .welcome {
     &__img {
-      width: 380px;
-      margin-bottom: 21px;
+      margin-bottom: 5px;
     }
 
     &__title {
       font-size: 52px;
-      margin-bottom: 27px;
     }
 
     &__subtitle {
@@ -1012,7 +1062,6 @@
     &__btn-gr {
       display: flex;
       flex-direction: column;
-      padding-bottom: 71px;
 
       & .welcome__btn-play {
         font-size: 14px;
@@ -1065,18 +1114,35 @@
       margin-top: 10px;
     }
   }
+
+  .footer__link-title {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 7px;
+  }
+
+  .footer__link {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    
+    &+&{
+      margin-top: 5px;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
   .welcome {
     &__img {
       width: 284px;
-      margin-bottom: 14px;
+      margin-bottom: 3px;
     }
 
     &__title {
       font-size: 38px;
-      margin-bottom: 23px;
+      margin-bottom: 13px;
     }
 
     &__subtitle {
@@ -1088,7 +1154,6 @@
   .footer {
     &__row {
       &-comp {
-        display: none;
       }
 
       &-mob {
@@ -1123,14 +1188,6 @@
           right: 30px;
         }
       }
-    }
-
-    &-btn {
-      display: none;
-    }
-
-    &-more {
-      display: block;
     }
   }
 
@@ -1441,17 +1498,62 @@
 }
 
 @media screen and (max-width: 375px) {
+  .top__page {
+    padding-top: 105px;
+  }
+
+  .welcome {
+    background-image: url(../images/welcome-bg-mob.png);
+    background-position: right top;
+
+    &__inner {
+      padding-top: 120px;
+    }
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 1px;
+    }
+
+    &__text {
+      margin-bottom: 39px;
+    }
+
+    &__items {
+      gap: 12px;
+      margin-bottom: 43px;
+    }
+  }
+
+  .why {
+    background-image: url(../images/why-bg-mob.png);
+    background-position: right top;
+  }
+
+  .table {
+    padding: 53px 0 55px;
+  }
+
   .post {
     max-width: 335px;
   }
 
   .post__section {
+    padding: 31px 0 54px;
+
     &-title {
       margin-bottom: 7px;
     }
 
     &-info {
       padding-bottom: 26px;
+    }
+
+    &-wrapper {
+      margin-bottom: 55px;
     }
   }
 
@@ -1808,7 +1910,18 @@
   }
 }
 
-@media screen and (max-width: 364px) {
+@media screen and (max-width: 368px) {
+  .welcome {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    &__items {
+      gap: 12px;
+    }
+  }
+
   .casino {
     &__items {
       gap: 5px;
@@ -1859,10 +1972,6 @@
     width: 320px;
   }
 
-  .welcome__title {
-    font-size: 32px;
-    margin-bottom: 8px;
-  }
 
   .post {
     max-width: 300px;
@@ -1894,5 +2003,9 @@
         }
       }
     }
+  }
+
+  .footer__row-columns {
+    display: flex;
   }
 }
