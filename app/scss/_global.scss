@@ -500,23 +500,20 @@ button,
       margin-bottom: 59px;
     }
 
+    &-comp-img {
+      height: 43px;
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
     &-comp {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-
-      & img {
-        margin-right: 40px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
-
-    &-comp-mob {
-      display: none;
     }
 
     &-social {
