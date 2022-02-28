@@ -90,8 +90,9 @@ button,
   border-radius: 10px;
   text-transform: capitalize;
   padding: 7px 24px;
-    
-  &:focus-visible{
+  white-space: nowrap;
+
+  &:focus-visible {
     border: none;
   }
 
@@ -326,7 +327,6 @@ button,
 
 .free-slot__card {
   display: flex;
-  align-items: center;
   width: 202px;
   background: linear-gradient(358.82deg, rgba(255, 255, 255, 0.5) -39.21%, #FFFFFF 19.05%);
   border: 1.08742px solid #FFFFFF;
@@ -360,6 +360,7 @@ button,
     height: 36px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     font-weight: 700;
     font-size: 30px;
     line-height: 32px;
@@ -435,14 +436,14 @@ button,
   background-size: cover;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 
 
   &-inner {
-    padding: 146px 0 84px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
     min-height: 100vh;
   }
 
@@ -468,8 +469,6 @@ button,
   }
 
   &-btn {
-    width: 165px;
-    height: 39px;
     margin: 0 auto;
     display: block;
     z-index: 5;

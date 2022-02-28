@@ -10,6 +10,112 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+
+          <button class="header__menu-open">
+            <img src="images/ico/menu-ico.png" alt="menu">
+          </button>
+          <div class="header__logo">
+            <img class="header__logo-img" src="images/ico/logo-ico.png" alt="logo">
+          </div>
+
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-link">
+                <a href="/">Home</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#real-money">Real Money</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#free-slots">Free Slots</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#slots-by-maker">Slots by Maker</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#no-deposit-bonuses">No deposit Bonuses</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#table-games">Table Games</a>
+              </li>
+              <li class="header__menu-link">
+                <a href="#casino-reviews">Casino Reviews</a>
+              </li>
+              <li class="header__menu-link header__menu-link--active">
+                <a href="#news">News</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__lang">
+            <span></span>
+            <img class="header__lang-img" src="images/ico/en-ico.png" alt="en-lang">
+            <button class="header-btn">
+              En
+              <img src="images/ico/arr-down.svg" alt="arr-ico">
+            </button>
+
+            <div class="header__lang-block">
+              <div class="header__lang-change">
+                <img class="header__lang-img" src="images/ico/en-ico.png" alt="en-lang">
+                <button class="header-btn lan-en">
+                  En
+                </button>
+              </div>
+              <div class="header__lang-change">
+                <img class="header__lang-img" src="images/ico/en-ico.png" alt="en-lang">
+                <button class="header-btn lan-ua" href="#">
+                  Ua
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="MobileMenu">
+          <div class="MobileMenu__inner">
+            <div class="MobileMenu__wrapper">
+              <div class="MobileMenu__top">
+                <img src="images/mobile-logo.png" alt="logo">
+                <img class="MobileMenu__close" src="images/ico/menu-close-ico.png" alt="">
+              </div>
+              <img class="MobileMenu-nam" src="images/mobile-menu.png" alt="">
+              <ul class="MobileMenu__list">
+                <li class="MobileMenu__link">
+                  <a href="/">Home</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#real-money">Real Money</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#free-slots">Free Slots</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#slots-by-maker">Slots by Maker</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#no-deposit-bonuses">No deposit Bonuses</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#table-games">Table Games</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#casino-reviews">Casino Reviews</a>
+                </li>
+                <li class="MobileMenu__link">
+                  <a href="#news">News</a>
+                </li>
+              </ul>
+              <span></span>
+              <p class="MobileMenu__cop">2013-2019 book of slots.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
 
       <section class="page__404">
@@ -23,9 +129,9 @@
                 Try searching or go to home page
               </p>
             </div>
-            <button class="page__404-btn">
-              <a href="#">Go to Home Page</a>
-            </button>
+            <a class="page__404-btn btn" href="#">
+              Go to Home Page
+            </a>
           </div>
         </div>
       </section>
@@ -38,18 +144,26 @@
 
           <div class="footer__row-top">
             <div class="footer__row-comp">
-              <img src="images/company/game-care.svg" alt="game-care">
-              <img src="images/company/begamble.svg" alt="begamble">
-              <img src="images/company/18+.svg" alt="18+">
-              <img src="images/company/dmca.svg" alt="dmca">
-              <img src="images/company/ecogra.svg" alt="ecogra">
-            </div>
-            <div class="footer__row-comp-mob">
-              <img src="images/company/game_care-mob.svg" alt="">
-              <img src="images/company/begamble-mob.svg" alt="">
-              <img src="images/company/18+-mob.svg" alt="">
-              <img src="images/company/dmca-mob.svg" alt="">
-              <img src="images/company/ecogra.svg" alt="">
+              <img 
+              srcset="images/company/game_care-mob.svg"
+              sizes="(max-width: 375px) 320px"
+              src="images/company/game-care.svg" alt="game-care">
+              <img
+              srcset="images/company/begamble-mob.svg"
+              sizes="(max-width: 375px) 320px" 
+              src="images/company/begamble.svg" alt="begamble">
+              <img
+              srcset="images/company/18+-mob.svg"
+              sizes="(max-width: 375px) 320px" 
+              src="images/company/18+.svg" alt="18+">
+              <img
+              srcset="images/company/dmca-mob.svg"
+              sizes="(max-width: 375px) 320px" 
+              src="images/company/dmca.svg" alt="dmca">
+              <img
+              srcset="images/company/ecogra-mob.svg"
+              sizes="(max-width: 375px) 320px"
+              src="images/company/ecogra.svg" alt="ecogra">
             </div>
             <div class="footer__row-social">
               <p>Like Us:</p>
@@ -60,7 +174,7 @@
 
           <div class="footer__row-middle">
             <div class="footer__logo">
-              <img src="images/logo-lg.svg" alt="">
+              <img src="images/logo-lg.svg" alt="logo-ico">
             </div>
 
             <div class="footer__row-columns">

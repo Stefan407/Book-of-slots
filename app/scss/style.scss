@@ -7,6 +7,7 @@
   position: absolute;
   width: 100%;
   height: 75px;
+  z-index: 100;
 
   &::after {
     content: '';
@@ -46,6 +47,7 @@
       text-align: start;
       margin-right: 28px;
       outline: none;
+      padding: 0;
 
       &:hover {
         border: none;
@@ -143,6 +145,7 @@
       margin-left: 7px;
       display: flex;
       align-items: center;
+      padding: 0;
 
       & img {
         margin-left: 4px;
@@ -230,20 +233,47 @@
   }
 }
 
+.header__lang {
+  &-block {
+    position: absolute;
+    top: 31px;
+    right: -11px;
+    background: linear-gradient(270.08deg, #0A1332 59.76%, rgba(10, 19, 50, 0) 115%);
+    border: 1.5px solid rgba(255, 255, 255, .5);
+    border-radius: 6px;
+    padding: 5px 14px;
+    width: 85px;
+    display: none;
+  }
+
+
+  &-change {
+    position: relative;
+    left: -29px;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.header__lang-block--active {
+  display: inline-block;
+}
+
 .welcome {
   background-image: url(../images/welcome-bg.png);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 0px);
 
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 223px;
+    min-height: calc(100vh - 0px);
   }
 
   &__img {
@@ -716,19 +746,19 @@
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  padding-top: 158px;
+  padding-top: 142px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 71px;
+    padding-bottom: 35px;
     position: relative;
   }
 
   &__start {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     padding: 18px 24px 27px 24px;
     background: linear-gradient(180deg, rgba(25, 33, 71, 0.4) 0%, rgba(38, 48, 96, 0.12) 100%);
     border-radius: 6px;
@@ -1123,7 +1153,7 @@
 
     &-row {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       justify-content: space-between;
       padding-bottom: 16px;
 
@@ -1443,7 +1473,14 @@
       &:hover {
         border: none;
       }
+
     }
+
+    &-like--active img {
+      content: url(../images/ico/heart-full-ico.png);
+    }
+
+
 
     &-more {
       position: absolute;
@@ -2054,7 +2091,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
@@ -2127,9 +2164,9 @@
 
 .adv-search {
   background-image: url(../images/advanced-bg.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   padding: 200px 0 88px;
 
@@ -2227,7 +2264,7 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 181.9px;
+  padding-top: 186px;
 
   &__title {
     margin: 0 auto 64px;
@@ -2338,7 +2375,7 @@
 
 .post-page {
   position: relative;
-  padding-top: 126px;
+  padding-top: 201px;
   background-color: $primary-color;
   color: #131B3C;
 
@@ -2412,6 +2449,7 @@
 
       &>div>div+img+div {
         display: block;
+        margin-bottom: 25px;
 
         &>p {
           font-weight: 700;
@@ -2450,7 +2488,7 @@
         }
 
         &>p+p+p+p+p {
-          margin: 12px 0 25px;
+          margin-top: 12px;
         }
 
       }
@@ -2640,6 +2678,7 @@
           display: block;
           resize: none;
           margin-left: 37px;
+          padding: 7px 13px;
           border: 1px solid #8289A4;
           border-radius: 6px;
           background-color: $primary-color;
@@ -2667,7 +2706,7 @@
         &>div {
           display: flex;
           flex-direction: column;
-          align-items: start;
+          align-items: flex-start;
           padding: 29px 48px 47px;
           position: relative;
 

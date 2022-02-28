@@ -22,8 +22,15 @@
   .header {
     height: 96px;
 
+    &__inner {
+      height: 96px;
+    }
+
     &__logo {
       height: 96px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
 
       &-img {
         height: 96px;
@@ -68,6 +75,14 @@
     }
   }
 
+  .header__lang-block {
+    background: linear-gradient(266.19deg, #0B112A 4.45%, rgba(11, 17, 42, 0.8) 80.66%);
+  }
+
+  .header__lang-change {
+    left: 0;
+  }
+
   .top__page {
     padding-top: 108px;
   }
@@ -76,14 +91,21 @@
     display: block;
   }
 
-  .casino {
-    padding-top: 179px;
+
+  .reviews {
+    padding-top: 183px;
   }
 
-  .page__404 {
-    &-inner {
-      padding-top: 166px;
-    }
+  .casino {
+    padding-top: 163px;
+  }
+
+  .slots-month {
+    padding-top: 207px;
+  }
+
+  .post-page {
+    padding-top: 222px;
   }
 
   .slots-month {
@@ -99,7 +121,8 @@
     }
 
     &__row-comp {
-      margin-bottom: 27px;
+      margin-bottom: 20px;
+      width: 100%;
     }
 
     &__row-social {
@@ -441,25 +464,6 @@
     }
   }
 
-  .comments {
-    &__item {
-      padding-bottom: 62px;
-
-      &-text {
-        max-height: 180px;
-        overflow: hidden;
-      }
-
-      &-like {
-        display: none;
-      }
-
-      &-more {
-        display: block;
-      }
-    }
-  }
-
   .blog {
     &__post {
       &-container {
@@ -486,6 +490,12 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .welcome {
+    &__inner {
+      padding: 182px 0 71px;
+    }
+  }
 
   .comments-title,
   .contact__title,
@@ -585,6 +595,18 @@
     }
   }
 
+  .recent-bonus__item {
+    margin-bottom: 12px;
+  }
+
+  .recent-bonus__item-wrapper {
+    flex-direction: column;
+  }
+
+  .recent-bonus__item-btn {
+    margin-left: 0;
+  }
+
   .reviews {
     &__title {
       font-weight: 700;
@@ -656,6 +678,11 @@
   }
 
   .page__404 {
+
+    &-inner {
+      padding-top: 75px;
+    }
+
     &-title {
       font-size: 55px;
       line-height: 60px;
@@ -685,6 +712,23 @@
     }
   }
 
+  .blog {
+    padding-top: 45px;
+
+    &__text {
+      display: block;
+
+      & p {
+        max-width: fit-content;
+
+        &+p {
+          margin-top: 12px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
   .post-page {
     &>div {
       &>div {
@@ -701,6 +745,7 @@
           margin-left: 0;
           max-width: 100%;
           width: auto;
+          margin-bottom: 54px;
 
           &>div {
             &>div {
@@ -719,6 +764,10 @@
 
   .footer {
     &__row {
+      &-social {
+        margin: 0 auto;
+      }
+
       &-columns {
         display: grid;
         justify-items: center;
@@ -761,32 +810,6 @@
     &:nth-child(3n) {
       margin-right: 0;
       margin-bottom: 30px;
-    }
-  }
-}
-
-@media screen and (max-width: 726px) {
-  .faqs {
-    &__items {
-      flex-direction: column;
-    }
-
-    &__item {
-      width: 100%;
-
-      &:last-child {
-        margin: 0;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 650px) and (min-width: 491px) {
-  .casino__card {
-    width: calc(33.33% - 13.33px);
-
-    &:nth-child(3n) {
-      margin: 0 0 30px 0;
     }
   }
 }
@@ -836,20 +859,24 @@
       margin-bottom: 24px;
     }
   }
+
+  .comments {
+    &__item {
+      &-like {
+        display: none;
+      }
+
+      &-more {
+        display: block;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 736px) {
   .recent-bonus {
     &__inner {
       padding: 22px 23px 29px;
-    }
-
-    &__item {
-      margin-bottom: 12px;
-
-      &-wrapper {
-        flex-direction: column;
-      }
     }
   }
 
@@ -863,6 +890,32 @@
 
   .line {
     top: -7px;
+  }
+}
+
+@media screen and (max-width: 726px) {
+  .faqs {
+    &__items {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) and (min-width: 491px) {
+  .casino__card {
+    width: calc(33.33% - 13.33px);
+
+    &:nth-child(3n) {
+      margin: 0 0 30px 0;
+    }
   }
 }
 
@@ -908,16 +961,13 @@
 
   .top__page-inner {
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 
   .breadcrumbs {
     margin-bottom: 10px;
   }
 
-  .casino {
-    padding-top: 215px;
-  }
 
   .popular-slotty {
     &__title {
@@ -946,8 +996,16 @@
     padding: 36px 35px 61px 35px;
   }
 
+  .casino {
+    padding-top: 198px;
+  }
+
   .reviews {
-    padding-top: 200px;
+    padding-top: 204px;
+  }
+
+  .post-page {
+    padding-top: 257px;
   }
 
   .search {
@@ -966,11 +1024,6 @@
   }
 
   .page__404 {
-    &-inner {
-      padding-top: 140px;
-
-    }
-
     &-title {
       font-size: 48px;
       line-height: 60px;
@@ -999,6 +1052,17 @@
       padding-bottom: 20px;
     }
   }
+
+  .post-page>div>div>div>div+img+div+div+p+div+div,
+  .post-page>div>div>div>div+img+div+div+p+div+div+div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__row-comp {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 
 @media screen and (max-width: 617px) {
@@ -1020,7 +1084,7 @@
 
         .post {
           width: 100%;
-          max-width: 100%;
+          max-width: 585px;
 
           &:nth-child(1n) {
             margin-bottom: 34px;
@@ -1029,6 +1093,10 @@
           &+& {
             margin-left: 0;
           }
+        }
+
+        .post+.post {
+          margin-left: 0;
         }
       }
     }
@@ -1087,6 +1155,10 @@
   .table__title {
     font-size: 37px;
     line-height: 44px;
+  }
+
+  .casino__list {
+    padding-top: 56px;
   }
 
   .post__section-title {
@@ -1153,7 +1225,6 @@
 
   .footer {
     &__row {
-      &-comp {}
 
       &-mob {
         display: flex;
@@ -1205,10 +1276,6 @@
   }
 
   .casino {
-    &__list {
-      padding-top: 41px;
-    }
-
     &__top--title {
       margin-bottom: 27px;
     }
@@ -1218,10 +1285,6 @@
     &__row {
       &-social {
         margin: 0 auto;
-
-        & img {
-          transform: scale(0.8);
-        }
 
         & p {
           margin-right: 22px;
@@ -1494,6 +1557,17 @@
       }
     }
   }
+
+  .post-page>div>div>div>div+img+div+div>div {
+    width: 162px;
+    height: 187px;
+  }
+
+  .footer {
+    &__row-comp img {
+      margin-right: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -1536,6 +1610,10 @@
     padding: 53px 0 55px;
   }
 
+  .blog {
+    padding-top: 31px;
+  }
+
   .post {
     max-width: 335px;
   }
@@ -1557,8 +1635,6 @@
   }
 
   .casino {
-    margin-bottom: 36px;
-
     &__items {
       gap: 5px;
       margin-bottom: 19px;
@@ -1625,7 +1701,7 @@
     &__item {
       &-bottom {
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
       }
 
       &-time {
@@ -1773,6 +1849,33 @@
     line-height: 24px;
   }
 
+  .top__casino-card {
+    padding: 35px 32px 42px;
+  }
+
+  .top__casino-star {
+    margin-bottom: 12px;
+  }
+
+  .top__casino-info {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 23px;
+  }
+
+  .top__casino-btn {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    padding: 8px 48px 8px 49px;
+    margin-bottom: 13px;
+  }
+
+  .top__casino-read {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
   .casino__card {
     height: 203px;
 
@@ -1780,10 +1883,6 @@
       height: 203px;
       padding: 19px 10px 10px;
     }
-  }
-
-  .casino__list {
-    padding-top: 33px;
   }
 
   .faqs {
@@ -1814,11 +1913,12 @@
   }
 
   .adv-search {
+    padding-top: 211px;
     padding-bottom: 54px;
 
     &__item {
       .slot__card {
-        width: 162px;
+        max-width: 162px;
         height: 185px;
       }
 
@@ -1853,10 +1953,14 @@
 
   .page__404 {
     background-image: url(../images/404-bg-mob.png);
-    background-position: center top;
 
     &-inner {
-      padding: 125px 0 51px;
+      padding-top: 125px;
+      margin-bottom: 50px;
+    }
+
+    &-top {
+      margin-bottom: 228px;
     }
 
     &-title {
@@ -1871,12 +1975,45 @@
     }
   }
 
-
   .slots-month-items .free-slot__card {
-    width: calc(50% - 8px);
-    margin-right: 15px;
+    width: 150px;
+    max-height: 177px;
+    margin: 0 35px 30px 0;
+
+    .free-slot__card-inner {
+      padding-bottom: 17px;
+    }
+
+    .free-slot__card-img {
+      margin-bottom: 14px;
+    }
+
+    .free-slot__card-name {
+      max-width: 125px;
+      height: 23px;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    .jq-ry-container {
+      width: auto !important;
+
+      &>.jq-ry-group-wrapper {
+        width: auto;
+
+        &>.jq-ry-group>svg {
+          width: 14px;
+          height: 14px;
+        }
+
+      }
+    }
   }
 
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
 
   .blog {
     &__title {
@@ -1907,13 +2044,180 @@
       }
     }
   }
+
+  .post-page>div>div>div>div>p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6.73px;
+  }
+
+  .post-page>div>div>div>div>p+div {
+    align-items: center;
+    margin-bottom: 25.47px;
+  }
+
+  .post-page>div>div>div>div>p+div>time {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+
+    &+div {
+      &>a>img {
+        width: 20.56px;
+        height: 20.26px;
+      }
+    }
+  }
+
+  .post-page>div>div>div>div>p+div+ul {
+    margin-bottom: 20px;
+  }
+
+  .post-page>div>div>div>div>p+div+ul>li {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .post-page>div>div>div>img {
+    margin-bottom: 28px;
+  }
+
+  .post-page>div>div>div>div+img+div {
+    margin-bottom: 20px;
+  }
+
+  .post-page>div>div>div>div+img+div>p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page>div>div>div>div+img+div>p+p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+  }
+
+  .post-page>div>div>div>div+img+div>p+p+p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+  }
+
+  .post-page>div>div>div>div+img+div>p+p+p+p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .post-page>div>div>div>div+img+div>p+p+p+p+p {
+    margin-top: 12px;
+  }
+
+  .post-page>div>div>div>div+img+div+div {
+    gap: 13px 12px;
+    margin-bottom: 29px;
+
+    &>div {
+      width: 160px;
+      height: 185px;
+    }
+  }
+
+  .post-page>div>div>div>div+img+div+div+p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page>div>div>div>div+img+div+div+p+div {
+    margin-bottom: 16px;
+  }
+
+  .post-page>div>div>div>div+img+div+div+p+div>p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page>div>div>div>div+img+div+div+p+div+div>p,
+  .post-page>div>div>div>div+img+div+div+p+div+div+div>p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
+  }
+
+  .post-page>div>div>div>div+img+div+div+p+div+div>div>p,
+  .post-page>div>div>div>div+img+div+div+p+div+div+div>div>p {
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    padding: 4px 23px;
+  }
+
+  .post-page>div>div>div>div+img+div+div+p+div+div+div+div+div {
+    padding-bottom: 46px;
+  }
+
+  .post-page>div>div>aside>div {
+    padding: 29px 33px;
+  }
+
+  .post-page>div>div>aside>div>div+div {
+    margin-top: 41px;
+  }
+
+  .post-page>div>div>aside>div>div+div::before {
+    top: -20px;
+  }
+
+  .post-page>div>div>aside>div>h4 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .post-page>div>div>aside>div>div>p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  .post-page>div>div>aside>div>div>p+p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .footer__row-comp {
+    column-gap: 10px;
+  }
+
+  .footer__row-social {
+    margin: 0;
+  }
+
+  .line {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 368px) {
   .welcome {
+    &__img {
+      width: 268px;
+    }
+
     &__title {
       font-size: 32px;
       margin-bottom: 8px;
+      margin-top: -5px;
     }
 
     &__items {
@@ -1928,6 +2232,7 @@
 
     &__item {
       height: 46px;
+      max-width: 61px;
     }
   }
 
@@ -1964,6 +2269,19 @@
       align-items: center;
     }
   }
+
+  .casino__card:hover .casino__card-btn {
+    width: calc(100% - 6.8px);
+  }
+
+  .slots-month-items .free-slot__card {
+    margin-right: 10px;
+  }
+
+  .post-page>div>div>div>div+img+div+div>div {
+    width: 139px;
+    height: 183px;
+  }
 }
 
 @media screen and (max-width: 359px) {
@@ -1974,6 +2292,19 @@
 
   .post {
     max-width: 300px;
+  }
+
+  .slots-month-items {
+    .free-slot__card {
+      width: 140px;
+      max-height: 167px;
+      margin-right: 10px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 25px 0;
   }
 
   .footer {
@@ -2006,5 +2337,9 @@
 
   .footer__row-columns {
     display: flex;
+  }
+
+  .footer__row-social {
+    margin: 0 auto;
   }
 }

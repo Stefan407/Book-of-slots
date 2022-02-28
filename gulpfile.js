@@ -25,10 +25,10 @@ function styles() {
             outputStyle: 'compressed'
         }))
         .pipe(concat('style.min.css'))
-        // .pipe(scss({
-        //     outputStyle: 'expanded'
-        // }))
-        // .pipe(concat('style.css'))
+        .pipe(scss({
+            outputStyle: 'expanded'
+        }))
+        .pipe(concat('style.css'))
         .pipe(autoprefixer({
             overrideBrowserlist: ['last 10 version']
         }))
