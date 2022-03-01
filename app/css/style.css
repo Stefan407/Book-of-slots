@@ -1,0 +1,5471 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Montserrat-Light.eot");
+  src: local(""), url("../fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.eot");
+  src: local(""), url("../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat-Medium.eot");
+  src: local(""), url("../fonts/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Montserrat-SemiBold.eot");
+  src: local(""), url("../fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Montserrat-Bold.eot");
+  src: local(""), url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Montserrat-ExtraBold.eot");
+  src: local(""), url("../fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Montserrat-Black.eot");
+  src: local(""), url("../fonts/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSansCondensed";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/OpenSansCondensed-Light.eot");
+  src: local(""), url("../fonts/OpenSansCondensed-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansCondensed-Light.woff2") format("woff2"), url("../fonts/OpenSansCondensed-Light.woff") format("woff"), url("../fonts/OpenSansCondensed-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "OpenSansCondensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/OpenSansCondensed-Bold.eot");
+  src: local(""), url("../fonts/OpenSansCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansCondensed-Bold.woff2") format("woff2"), url("../fonts/OpenSansCondensed-Bold.woff") format("woff"), url("../fonts/OpenSansCondensed-Bold.ttf") format("truetype");
+}
+html {
+  box-sizing: border-box;
+}
+
+* {
+  transition: 0.3s ease;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+button, ul[class], ol[class] {
+  padding: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul[class], ol[class], figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul, ul[class] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:active, a:focus, a:hover {
+  outline: none;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  color: #fff;
+  background-color: #0b112a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+button, .btn {
+  cursor: pointer;
+  border: 1px solid #f90;
+  background-color: #f90;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: capitalize;
+  padding: 7px 24px;
+  white-space: nowrap;
+}
+
+button:focus-visible, .btn:focus-visible {
+  border: none;
+}
+
+button:hover, .btn:hover {
+  background-color: transparent;
+  border: 1px solid #f90;
+}
+
+.search {
+  max-width: 388px;
+  width: 100%;
+  height: 41px;
+  position: relative;
+}
+
+.search-inp {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  max-width: 388px;
+  width: 100%;
+  height: 41px;
+  color: #000;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  outline: 0;
+  text-overflow: ellipsis;
+  padding: 0 104px;
+}
+
+.search-inp[type=search]::-moz-placeholder {
+  color: #000;
+}
+
+.search-inp[type=search]:-ms-input-placeholder {
+  color: #000;
+}
+
+.search-inp[type=search]::placeholder {
+  color: #000;
+}
+
+.search-btn {
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 13px;
+  top: 6px;
+  border: none;
+  background-color: transparent;
+}
+
+.search-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.slot__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 185px;
+  height: 185px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 1px;
+}
+
+.slot__card:hover {
+  box-shadow: 0px 6px 20px rgba(21, 22, 30, 0.3);
+}
+
+.slot__card-img {
+  max-width: 185px;
+  height: 111px;
+}
+
+.slot__card-img img {
+  max-width: 185px;
+  width: 100%;
+  height: 111px;
+  border-radius: 1px 1px 0px 0px;
+}
+
+.slot__card-info {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 13px;
+}
+
+.slot__card-title {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  margin-bottom: 3px;
+  color: #0b112a;
+  max-width: 164px;
+  width: 100%;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.slot__card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slot__card-comp {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.slot__card .star {
+  display: flex;
+  align-items: center;
+}
+
+.post {
+  max-width: 585px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.post-info {
+  padding: 10px 24px 22px 23px;
+  position: relative;
+  top: -9px;
+}
+
+.post img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  max-width: 585px;
+  width: 100%;
+  max-height: 316px;
+}
+
+.post-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #131b3c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #828282;
+}
+
+.post-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #0b112a;
+  margin-bottom: 3px;
+  height: 78px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-links {
+  display: flex;
+  justify-content: end;
+}
+
+.post-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  color: #f90;
+}
+
+.post-link + .post-link {
+  text-decoration: underline;
+  margin-left: 13px;
+}
+
+.post-link + .post-link:hover {
+  font-weight: 600;
+}
+
+.post-more {
+  text-decoration: underline;
+  margin-left: 13px;
+}
+
+.post-more:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.post:hover {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.free-slot__card {
+  display: flex;
+  width: 202px;
+  background: linear-gradient(358.82deg, rgba(255, 255, 255, 0.5) -39.21%, #FFFFFF 19.05%);
+  border: 1.08742px solid #fff;
+  box-sizing: border-box;
+  border-radius: 2.17484px;
+}
+
+.free-slot__card-inner {
+  padding: 1px 1px 28px 1px;
+}
+
+.free-slot__card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -9px;
+}
+
+.free-slot__card img {
+  max-width: 198px;
+  width: 100%;
+  max-height: 130.26px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+  margin-bottom: 27.72px;
+}
+
+.free-slot__card-name {
+  font-family: "OpenSansCondensed", sans-serif;
+  max-width: 180px;
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #0b112a;
+  margin-bottom: 25px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  padding-top: 33px;
+  margin: 0 auto;
+  max-width: 359px;
+  width: 100%;
+}
+
+.pagination .pagination__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 35px;
+  max-width: 330px;
+  width: 100%;
+}
+
+.pagination__link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  position: relative;
+}
+
+.pagination__link:hover::after {
+  content: url(../images/hover.png);
+  position: absolute;
+  top: -8px;
+  left: -12px;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination__link--active {
+  position: relative;
+}
+
+.pagination__link--active::before {
+  content: url(../images/hover.png);
+  position: absolute;
+  top: -8px;
+  left: -12px;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination span.pagination__link--active:hover::after {
+  content: none;
+}
+
+.pagination__arrows {
+  display: flex;
+  align-items: center;
+}
+
+.page__404 {
+  background-image: url(../images/404-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.page__404-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.page__404-title {
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #ffbf60;
+  max-width: 600px;
+  width: 100%;
+  z-index: 5;
+}
+
+.page__404-subtitle {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  z-index: 5;
+}
+
+.page__404-btn {
+  margin: 0 auto;
+  display: block;
+  z-index: 5;
+}
+
+.page__404-btn a {
+  color: #fff;
+}
+
+.footer {
+  background-image: url(../images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 19% bottom;
+  filter: grayscale(1);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 57px;
+  margin-bottom: 59px;
+}
+
+.footer__row-comp-img {
+  height: 43px;
+  margin-right: 40px;
+}
+
+.footer__row-comp-img:last-child {
+  margin-right: 0;
+}
+
+.footer__row-comp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__row-social {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.footer__row-social p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-right: 38px;
+}
+
+.footer__row-social a {
+  position: relative;
+  top: 4px;
+}
+
+.footer__row-social a + a {
+  margin-left: 35px;
+  margin-right: 12px;
+}
+
+.footer__row-middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.footer__row-middle .footer__logo {
+  margin-left: 11px;
+  margin-right: 15px;
+}
+
+.footer__row-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer__row-column:last-child {
+  margin-right: 120px;
+}
+
+.footer__row-bottom {
+  display: flex;
+  justify-content: space-between;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  color: #b8b8b8;
+  padding-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer__row-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.footer__link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+}
+
+.footer__link a {
+  cursor: pointer;
+  color: #fff;
+}
+
+.footer__link-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.footer__link-bott {
+  white-space: nowrap;
+  margin-right: 25px;
+}
+
+.footer__link-bott a {
+  color: #b8b8b8;
+}
+
+.footer__link-bott:last-child {
+  margin-right: 0;
+}
+
+.footer span {
+  height: 1px;
+  width: 100%;
+  background: #b8b8b8;
+  margin-bottom: 28px;
+}
+
+.search__main-btn img, .search-btn img:focus-visible {
+  outline: none;
+}
+
+.search__main-btn:hover {
+  border: none;
+}
+
+.jq-ry-container {
+  position: relative;
+  padding: 0 5px;
+  line-height: 0;
+  display: block;
+  cursor: pointer;
+  box-sizing: content-box;
+  direction: ltr;
+}
+
+.jq-ry-container[readonly=readonly] {
+  cursor: default;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group {
+  position: relative;
+  line-height: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+  display: inline-block;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-normal-group {
+  width: 100%;
+}
+
+.jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group.jq-ry-rated-group {
+  width: 0;
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 75px;
+  z-index: 100;
+}
+
+.header::after {
+  content: "";
+  background: linear-gradient(270.08deg, #0A1332 59.76%, rgba(10, 19, 50, 0) 115%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  z-index: 2;
+  overflow: hidden;
+  height: 75px;
+}
+
+.header__logo-img {
+  height: 75px;
+}
+
+.header__menu-open {
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+  margin-right: 28px;
+  outline: none;
+  padding: 0;
+}
+
+.header__menu-open:hover {
+  border: none;
+  outline: none;
+}
+
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  width: 915px;
+}
+
+.header__menu-link {
+  position: relative;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.header__menu-link a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header__menu-link:hover::after {
+  content: url(../images/hover.svg);
+  position: absolute;
+  right: -14px;
+  z-index: -1;
+}
+
+.header__menu-link--active::after {
+  content: url(../images/hover.svg);
+  position: absolute;
+  right: -14px;
+  z-index: -1;
+}
+
+.header__lang {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__lang span {
+  width: 1px;
+  height: 13px;
+  background-color: #fff;
+}
+
+.header__lang-img {
+  margin-left: 30px;
+}
+
+.header__lang button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.header__lang button img {
+  margin-left: 4px;
+}
+
+.MobileMenu {
+  z-index: 15;
+}
+
+.MobileMenu__inner {
+  position: fixed;
+  overflow: auto;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 375px;
+  transition: all 0.4s ease-in-out;
+  background: #0b112a;
+  transform: translateX(-400px);
+}
+
+.MobileMenu__wrapper {
+  padding: 39px 23.89px 33px 28px;
+}
+
+.MobileMenu__inner--active {
+  transform: translateX(0);
+}
+
+.MobileMenu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 58px;
+}
+
+.MobileMenu__close {
+  cursor: pointer;
+}
+
+.MobileMenu-nam {
+  margin-bottom: 30px;
+}
+
+.MobileMenu__link a {
+  display: inline-block;
+  width: 100%;
+  padding: 16.5px 5px;
+  margin-bottom: 0 !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 34px;
+  color: #fff;
+}
+
+.MobileMenu__link:last-child {
+  margin-bottom: 49px;
+}
+
+.MobileMenu span {
+  display: block;
+  width: 313px;
+  height: 1px;
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+
+.MobileMenu__cop {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: #b8b8b8;
+}
+
+.header__lang-block {
+  position: absolute;
+  top: 31px;
+  right: -11px;
+  background: linear-gradient(270.08deg, #0A1332 59.76%, rgba(10, 19, 50, 0) 115%);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  padding: 5px 14px;
+  width: 85px;
+  display: none;
+}
+
+.header__lang-change {
+  position: relative;
+  left: -29px;
+  display: flex;
+  align-items: center;
+}
+
+.header__lang-block--active {
+  display: inline-block;
+}
+
+.welcome {
+  background-image: url(../images/welcome-bg.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: calc(100vh - 0px);
+}
+
+.welcome__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 0px);
+}
+
+.welcome__img {
+  margin-bottom: 33px;
+  width: 686px;
+}
+
+.welcome__subtitle {
+  font-weight: 800;
+  font-size: 92px;
+  line-height: 25px;
+  height: 52px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  margin-bottom: 43px;
+}
+
+.welcome__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 92px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+  height: 55px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 65px;
+}
+
+.welcome__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.welcome span {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  white-space: nowrap;
+  text-transform: capitalize;
+}
+
+.welcome__items {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 67px;
+}
+
+.welcome__item {
+  display: flex;
+  align-items: center;
+}
+
+.welcome__item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  margin-left: 24px;
+  width: 126px;
+}
+
+.welcome__btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  padding: 7px 24px;
+}
+
+.welcome__btn + .welcome__btn {
+  padding: 7px 22px 8px 23px;
+  margin-left: 60px;
+}
+
+.why {
+  background-image: url(../images/why-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 152px 0 53px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  background-color: rgba(11, 17, 42, 0.95);
+}
+
+.why::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0b112a;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.why__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.why__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 68px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 21px;
+  max-width: 692px;
+  width: 100%;
+}
+
+.why__text-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.why__text-item {
+  max-width: 580px;
+  margin-bottom: 13px;
+}
+
+.why__text-item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.why__text-item:nth-child(even) {
+  margin-left: 36px;
+}
+
+.search__main {
+  position: absolute;
+  top: -34px;
+  max-width: 740px;
+  width: 100%;
+  height: 68px;
+  padding: 0 20px;
+}
+
+.search__main-inp {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  max-width: 700px;
+  width: 100%;
+  height: 68px;
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: 0;
+  text-overflow: ellipsis;
+  padding-left: 27px;
+  padding-right: 95px;
+}
+
+.search__main-inp[type=search]::-moz-placeholder {
+  color: #000;
+}
+
+.search__main-inp[type=search]:-ms-input-placeholder {
+  color: #000;
+}
+
+.search__main-inp[type=search]::placeholder {
+  color: #000;
+}
+
+.search__main-btn {
+  cursor: pointer;
+  position: absolute;
+  padding: 0;
+  right: 30px;
+  top: 12px;
+  border: none;
+  background-color: transparent;
+}
+
+.table {
+  padding: 47px 0 93px;
+}
+
+.table__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 66px;
+  text-transform: uppercase;
+  margin-bottom: 46px;
+}
+
+.table table {
+  border-spacing: 3px 10px;
+}
+
+.table th, .table td {
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.table th {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  height: 37px;
+}
+
+.table td {
+  height: 81px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.table__num {
+  width: 59px;
+  border-radius: 12px 2px 2px 2px;
+}
+
+.table__casino {
+  width: 121px;
+  border-radius: 2px;
+}
+
+.table__casino-inf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__bonus {
+  width: 248px;
+  border-radius: 2px;
+}
+
+.table__bonus-inf {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f90;
+}
+
+.table__play {
+  width: 223px;
+  border-radius: 2px;
+}
+
+.table__review {
+  width: 234px;
+  border-radius: 2px;
+}
+
+.table__games {
+  width: 146px;
+  border-radius: 2px;
+}
+
+.table__deposit {
+  width: 151px;
+  border-radius: 2px 12px 2px 2px;
+}
+
+.table__deposit-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 122px;
+  height: 52px;
+  margin: 0 auto;
+}
+
+.table__btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: capitalize;
+  max-width: 161px;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.table__btn-mob {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10.9466px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: capitalize;
+  padding: 6.26px 15.64px;
+  border-radius: 7.81899px;
+  margin: 0 auto;
+  display: none;
+}
+
+.table__btn-mob a {
+  color: #fff;
+}
+
+.post__section {
+  padding: 72px 0 90px;
+  background-color: #fff;
+}
+
+.post__section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 68px;
+  text-transform: uppercase;
+  color: #0b112a;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+.post__section-wrapper {
+  display: grid;
+  grid-gap: 30px 31px;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  margin-bottom: 80px;
+}
+
+.post__section-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.post__section-btn a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.post__section-btn a:hover {
+  background: #f90;
+}
+
+.top__page {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  padding: 87px 0 30px;
+}
+
+.top__page-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadcrumbs {
+  margin-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+}
+
+.breadcrumbs__place {
+  font-weight: 300;
+  margin-right: 3px;
+}
+
+.breadcrumbs__link {
+  font-weight: 500;
+  color: inherit;
+  cursor: pointer;
+}
+
+.breadcrumbs__list {
+  display: flex;
+}
+
+.breadcrumbs__item + .breadcrumbs__item ::before {
+  content: "/";
+}
+
+.casino {
+  background-image: url(../images/casino-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  padding-top: 142px;
+}
+
+.casino__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 35px;
+  position: relative;
+}
+
+.casino__start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 24px 27px 24px;
+  background: linear-gradient(180deg, rgba(25, 33, 71, 0.4) 0%, rgba(38, 48, 96, 0.12) 100%);
+  border-radius: 6px;
+}
+
+.casino__start-top {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.casino__start-logo {
+  margin-right: 17px;
+}
+
+.casino__start-rev {
+  position: absolute;
+  right: 0;
+}
+
+.casino__start-banner {
+  max-width: 744px;
+  width: 100%;
+  max-height: 422px;
+  border-radius: 6px;
+  margin-bottom: 22px;
+}
+
+.casino__start-btn {
+  margin: 0 auto;
+  width: 144px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.casino__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.casino__info {
+  width: 388px;
+  margin-left: 30px;
+  padding: 20px 20px 32px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(25, 33, 71, 0.4) 0%, rgba(38, 48, 96, 0.12) 100%);
+}
+
+.casino__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.casino__item {
+  width: 80px;
+  height: 56px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.14) 100%);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.casino__item span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 0.02em;
+  width: 71px;
+  text-align: center;
+}
+
+.casino__item img {
+  margin-bottom: 3px;
+}
+
+.casino__item-num {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: center;
+}
+
+.casino__bonus-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 1px;
+  color: #f90;
+}
+
+.casino__bonus-name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.casino__bonus-table-txt {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+
+.casino__bonus-table-txt span {
+  color: #f90;
+  display: block;
+}
+
+.casino__bonus-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.casino__bonus-row {
+  display: flex;
+  background: rgba(11, 17, 42, 0.4);
+  border-radius: 1px;
+  padding: 0px 6px 15px 9px;
+}
+
+.casino__bonus-col {
+  display: flex;
+  width: 100%;
+}
+
+.casino__bonus-claim {
+  position: relative;
+  padding-left: 12px;
+}
+
+.casino__bonus-claim::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  top: 0;
+  top: 10px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+}
+
+.casino__bonus-inf {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 12px;
+  width: 100%;
+}
+
+.casino__bonus-inf + .casino__bonus-inf {
+  padding-left: 12px;
+}
+
+.casino__bonus-inf + .casino__bonus-inf::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  top: 0;
+  top: 10px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+}
+
+.casino__bonus-inf-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 3px;
+}
+
+.casino__bonus-inf-company {
+  margin-bottom: 7px;
+}
+
+.casino__bonus-inf-apply {
+  position: relative;
+  right: -10px;
+}
+
+.casino__bonus-inf-gift {
+  position: relative;
+  top: -2.11px;
+}
+
+.casino__bonus-up {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-bottom: 3px;
+}
+
+.casino__bonus-btn {
+  width: 74px;
+  height: 19px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.casino__bonus-more {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-transform: capitalize;
+  color: #d1d5e9;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.casino__bonus-txt {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+}
+
+.casino__bonus-list {
+  position: relative;
+  width: 322px;
+  left: 20px;
+  margin-top: 29px !important;
+  list-style: disc !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.casino__bonus-list::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: -22px;
+  height: 1px;
+  width: 345px;
+  background: #fff;
+  opacity: 0.1;
+  border-radius: 1px;
+}
+
+.casino__bonus-li + .casino__bonus-li {
+  margin-top: 12px;
+}
+
+.line {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+  max-width: 997px;
+  width: 100%;
+}
+
+.review {
+  position: relative;
+  padding-top: 16px;
+  background-color: #0b112a;
+}
+
+.review__block-left {
+  margin-top: 56px;
+}
+
+.review__block-title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.review__block-text.review__block-text--active {
+  height: 100%;
+}
+
+.review__block-text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.review__block-text p + p {
+  margin-top: 12px;
+}
+
+.review__more-btn {
+  width: 173px;
+  height: 41px;
+  margin: 24px auto 52px;
+  display: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  background-color: transparent;
+}
+
+.review__inner {
+  display: flex;
+}
+
+.review__atr {
+  background: linear-gradient(180deg, rgba(25, 33, 71, 0.4) 0%, rgba(38, 48, 96, 0.12) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  position: relative;
+  margin-top: 18px;
+  margin-left: 30px;
+}
+
+.review__atr-inner {
+  padding: 23px 55px 48px 62px;
+  width: 387px;
+}
+
+.review__atr-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f90;
+  margin-bottom: 27px;
+}
+
+.review__atr-subtitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #ffbf60;
+  padding-right: 16px;
+  max-width: 85px;
+  width: 100%;
+}
+
+.review__atr-info {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  max-width: 169px;
+  width: 100%;
+}
+
+.review__atr-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.review__atr-row + .review__atr-row {
+  position: relative;
+  padding-top: 8px;
+}
+
+.review__atr-row + .review__atr-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 270px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #fff;
+  opacity: 0.1;
+}
+
+.recent-bonus {
+  position: relative;
+  padding-top: 89px;
+}
+
+.recent-bonus__inner {
+  background: linear-gradient(359.15deg, rgba(11, 17, 42, 0.7) 0.77%, rgba(11, 17, 42, 0) 99.31%), rgba(44, 51, 78, 0.8);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  max-width: 996px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 42px 79px 49px;
+}
+
+.recent-bonus__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 19px;
+}
+
+.recent-bonus__items {
+  position: relative;
+  left: 2px;
+}
+
+.recent-bonus__item {
+  display: flex;
+}
+
+.recent-bonus__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-bonus__item-wrapper + .recent-bonus__item-wrapper {
+  position: relative;
+  margin-top: 42px;
+}
+
+.recent-bonus__item-wrapper + .recent-bonus__item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -21px;
+  height: 1px;
+  max-width: 834px;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.1;
+  border-radius: 1px;
+}
+
+.recent-bonus__item-img {
+  width: 107px;
+  height: 82px;
+  margin-right: 15px;
+}
+
+.recent-bonus__item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-bonus__item-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #ffbf60;
+  margin-bottom: 5px;
+}
+
+.recent-bonus__item-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.recent-bonus__item-text span {
+  display: block;
+}
+
+.recent-bonus__item-bottom {
+  display: flex;
+  align-items: center;
+}
+
+.recent-bonus__item-time {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #ffbf60;
+  opacity: 0.6;
+  display: flex;
+  align-items: center;
+  margin-right: 54px;
+}
+
+.recent-bonus__item-time img {
+  margin-right: 3px;
+}
+
+.recent-bonus__item-wager {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #ffbf60;
+  opacity: 0.6;
+}
+
+.recent-bonus__item-wager span {
+  color: #fff;
+}
+
+.recent-bonus__item-btn {
+  padding: 7px 35px 7px 36px;
+  margin-left: 40px;
+}
+
+.popular-slotty {
+  padding-top: 60px;
+  position: relative;
+}
+
+.popular-slotty::before {
+  content: url(../images/ico/coins-ico.png);
+  position: absolute;
+  left: 97.53px;
+}
+
+.popular-slotty__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 auto 34px;
+  text-align: center;
+  max-width: 837px;
+}
+
+.popular-slotty__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 70px;
+}
+
+.popular-slotty__inner {
+  margin-bottom: 58px;
+}
+
+.popular-slotty__btn {
+  display: flex;
+  justify-content: center;
+}
+
+.popular-slotty__btn a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 7px 24px;
+  color: inherit;
+}
+
+.comments {
+  background-image: url(../images/comments-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.comments-title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.comments__inner {
+  padding: 97px 0 57px;
+}
+
+.comments__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 74px;
+}
+
+.comments__item {
+  position: relative;
+  max-width: 1195px;
+  width: 100%;
+  padding: 43px 97px 54px 101px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+  border-radius: 12px;
+}
+
+.comments__item + .comments__item {
+  margin-top: 30px;
+}
+
+.comments__item-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.comments__item-top img {
+  width: 82px;
+  height: 90px;
+  border-radius: 12px;
+  margin-right: 19px;
+}
+
+.comments__item-prof {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.comments__item-prof img {
+  margin-right: 19px;
+}
+
+.comments__item-prof-name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  align-items: center;
+  color: #0b112a;
+  margin-bottom: 1px;
+}
+
+.comments__item-prof-date {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  color: #6f7283;
+  position: relative;
+  left: 1px;
+}
+
+.comments__item-star-block {
+  display: flex;
+}
+
+.comments__item-star-block span {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #6f7283;
+  margin-left: 15px;
+}
+
+.comments__item-text p {
+  position: relative;
+  left: 102px;
+  padding-right: 97px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #000;
+  text-overflow: ellipsis;
+}
+
+.comments__item-text p + p {
+  margin-top: 12px;
+}
+
+.comments__item-like {
+  position: absolute;
+  bottom: 41px;
+  right: 98px;
+  background-color: transparent;
+  border: none;
+}
+
+.comments__item-like:hover {
+  border: none;
+}
+
+.comments__item-like--active img {
+  content: url(../images/ico/heart-full-ico.png);
+}
+
+.comments__item-more {
+  position: absolute;
+  right: 49px;
+  bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  background-color: transparent;
+  color: #f90;
+  text-decoration: underline;
+  display: none;
+  cursor: pointer;
+}
+
+.comments-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.comments-btn a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  background-color: transparent;
+}
+
+.jq-ry-container {
+  padding: 0;
+}
+
+.contact {
+  background-image: url(..//images/contact-bg.png);
+  background-repeat: no-repeat;
+  background-position: 45% bottom;
+  background-size: cover;
+  padding: 72px 0 67px;
+}
+
+.contact__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 928px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 74px 67px 80px 64px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) -12.28%, rgba(255, 255, 255, 0) 100%), rgba(11, 17, 42, 0.3);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+
+.contact__form-box {
+  display: flex;
+}
+
+.contact__form-box-left img {
+  width: 100%;
+  max-width: 288px;
+  height: 71px;
+  margin-top: 47px;
+}
+
+.contact__form-box-right {
+  width: 100%;
+  margin-left: 50px;
+}
+
+.contact__form-name {
+  position: relative;
+}
+
+.contact__form-name::after {
+  content: url(../images/ico/profile-ico.svg);
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 49px;
+  left: 13px;
+}
+
+.contact__form-mail {
+  margin-top: 36px;
+  position: relative;
+}
+
+.contact__form-mail::after {
+  content: url(../images/ico/mail-ico.svg);
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 49px;
+  left: 13px;
+}
+
+.contact__form label {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact__form-input-name {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  width: 337px;
+  height: 44px;
+  border: none;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-overflow: ellipsis;
+  color: #828282;
+}
+
+.contact__form-input-name[type=text]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-input-name[type=text]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-input-name[type=text]::placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-input-profile {
+  position: absolute;
+}
+
+.contact__form-input-mail {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  width: 337px;
+  height: 44px;
+  border: none;
+  position: relative;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-overflow: ellipsis;
+  color: #828282;
+}
+
+.contact__form-input-mail[type=text]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-input-mail[type=text]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-input-mail[type=text]::placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-textarea {
+  max-width: 407px;
+  width: 100%;
+  height: 165px;
+  padding: 7px 32px;
+  text-overflow: ellipsis;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  border: none;
+  resize: none;
+  margin-bottom: 67px;
+  color: #828282;
+}
+
+.contact__form-textarea[type=text]::-moz-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-textarea[type=text]:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-textarea[type=text]::placeholder {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #828282;
+}
+
+.contact__form-btn {
+  padding: 7px 38px 7px 39px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.reviews {
+  background-image: url(../images/reviews-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  padding-top: 162px;
+  z-index: 5;
+}
+
+.reviews__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 81px;
+}
+
+.reviews__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #f90;
+  margin-bottom: 29px;
+}
+
+.reviews__text-block {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
+.reviews__text-block .reviews__text + .reviews__text {
+  margin-top: 12px;
+}
+
+.reviews__list {
+  position: relative;
+  left: 17px;
+}
+
+.reviews__list-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #ffbf60;
+  margin-bottom: 13px;
+}
+
+.reviews__list-li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  list-style: disc;
+}
+
+.reviews__list-li + .reviews__list-li {
+  margin-top: 12px;
+}
+
+.top__casino {
+  margin-left: 92px;
+}
+
+.top__casino-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  max-width: 270px;
+  margin: 0 auto 35px;
+}
+
+.top__casino-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 312px;
+  width: 100%;
+  padding: 49px 19px 22px 20px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) -12.28%, rgba(255, 255, 255, 0) 100%), rgba(20, 38, 102, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+}
+
+.top__casino-name {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-transform: capitalize;
+  margin-bottom: 26.95px;
+}
+
+.top__casino-img {
+  max-width: 184px;
+  width: 100%;
+  margin-bottom: 19.67px;
+}
+
+.top__casino-star {
+  margin-bottom: 7.72px;
+}
+
+.top__casino-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.top__casino-info span {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.top__casino-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 38px 7px 42px;
+  margin-bottom: 14px;
+}
+
+.top__casino-btn a {
+  color: #fff;
+}
+
+.top__casino-read {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.casino__list {
+  background-image: url(../images/casino-list-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 68px;
+  position: relative;
+}
+
+.casino__list-inner {
+  padding-bottom: 75px;
+}
+
+.casino__top {
+  margin-bottom: 41px;
+}
+
+.casino__top--title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.casino__top-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 897px;
+  margin: 0 auto;
+  gap: 30px 20px;
+}
+
+.casino__list-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  max-width: 897px;
+  margin: 0 auto;
+  gap: 30px 20px;
+}
+
+.casino__card {
+  position: relative;
+  overflow: hidden;
+  width: calc(20% - 16px);
+  height: 206px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.125) -9.61%, rgba(255, 255, 255, 0) 100%), rgba(20, 38, 102, 0.25);
+}
+
+.casino__card:hover {
+  transform: scale(1.05);
+  border: 0.767226px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3.14815px;
+  box-shadow: 0px 0px 30px rgba(190, 218, 244, 0.2);
+  position: relative;
+}
+
+.casino__card:hover .casino__card-btn {
+  transform: translate(0, -50%);
+  width: calc(100% - 12.8px);
+  z-index: 4;
+}
+
+.casino__card:hover .casino__card-inner {
+  filter: blur(5px);
+}
+
+.casino__card:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.125) -9.61%, rgba(255, 255, 255, 0) 100%), rgba(121, 136, 186, 0.1);
+}
+
+.casino__card-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: 0 auto;
+  padding: 7px 23px;
+  transform: translateY(300%);
+  background: #f90;
+}
+
+.casino__card-inner {
+  height: 206px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 19px 16px 14px;
+  border: 0.731121px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+
+.casino__card-name--title {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  color: #fff;
+  width: 130px;
+  margin-bottom: 10.82px;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.casino__card-img {
+  max-width: 116px;
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  margin-bottom: 8.29px;
+}
+
+.casino__card-img img {
+  max-width: 116px;
+  width: 100%;
+  height: 70px;
+}
+
+.casino__card-info--title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 15px;
+  color: #fff;
+  margin-bottom: 6.38px;
+  text-align: center;
+}
+
+.casino__card-info--prize {
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+  min-height: 25px;
+  text-align: center;
+}
+
+.casino__card-info--prize span {
+  color: #f90;
+}
+
+.casino__card-info-terms {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.search__container {
+  background: linear-gradient(180deg, #192147 0%, rgba(38, 48, 96, 0.7) 100%);
+  box-shadow: 0px 6px 20px rgba(21, 22, 30, 0.4);
+  border-radius: 6px;
+  position: relative;
+  max-width: 911px;
+  width: 100%;
+  margin: 0 auto 33px;
+  height: 105px;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  padding-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__container::before {
+  content: url(../images/casino-star.png);
+  position: absolute;
+  left: -30px;
+  top: -32px;
+}
+
+.search__container .search {
+  margin: 32px auto 31px;
+}
+
+.win {
+  position: relative;
+  padding: 34px 0 55px;
+}
+
+.win__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 68px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 902px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 42px;
+}
+
+.win__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.win__inner img {
+  max-width: 389px;
+  width: 100%;
+}
+
+.win__text {
+  margin-left: 102.22px;
+}
+
+.win__text p {
+  margin-top: 12px;
+}
+
+.faqs {
+  background-image: url(../images/faqs-bg.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 94px 0 108px;
+}
+
+.faqs__title {
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 66px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 43px;
+}
+
+.faqs__title span {
+  white-space: nowrap;
+}
+
+.faqs__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.faqs__item {
+  border: none;
+  text-align: left;
+  text-transform: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 20px);
+  min-height: 94px;
+  padding: 0 43px 0 49px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #EFEFEF 100%);
+}
+
+.faqs__item:hover {
+  border: none;
+}
+
+.faqs__item-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 94px;
+}
+
+.faqs__item-top img {
+  margin-left: 20px;
+}
+
+.faqs__item-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #0b112a;
+  max-width: 467px;
+}
+
+.faqs__item-info {
+  display: none;
+  padding: 0 6px 26px 0;
+}
+
+.faqs__item-text {
+  position: relative;
+  top: -12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.faqs__item.open .faqs__item-info {
+  display: block;
+}
+
+.faqs__item.open img {
+  content: url(../images/ico/arr-faqs-u-ico.png);
+}
+
+.adv-search {
+  background-image: url(../images/advanced-bg.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 200px 0 88px;
+}
+
+.adv-search__inner {
+  max-width: 795px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.adv-search__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff;
+  margin-bottom: 45px;
+}
+
+.adv-search__item {
+  display: flex;
+  align-items: center;
+}
+
+.adv-search__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 73px;
+  max-width: 541px;
+  width: 100%;
+}
+
+.adv-search__item-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.adv-search__item-info {
+  display: flex;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.adv-search__item-char {
+  position: relative;
+  margin-right: 37px;
+}
+
+.adv-search__item-char + .adv-search__item-char::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  left: -11px;
+  top: 5px;
+  background-color: #fff;
+}
+
+.adv-search__item-char:last-child {
+  margin-right: 0;
+}
+
+.adv-search__item-feat {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #fff;
+  height: 55px;
+  margin-bottom: 24px;
+}
+
+.adv-search__item-btn {
+  padding: 7px 44px 7px 45px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.adv-search__item + .adv-search__item {
+  margin-top: 79px;
+}
+
+.slots-month {
+  background-image: url(../images/news-bg.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 186px;
+}
+
+.slots-month__title {
+  margin: 0 auto 64px;
+  max-width: 540px;
+  width: 100%;
+}
+
+.slots-month-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.slots-month-items .free-slot__card {
+  max-height: 275px;
+  margin: 0 51px 40px 0;
+}
+
+.slots-month-items .free-slot__card:nth-child(5n) {
+  margin: 0 0 40px 0;
+}
+
+.blog {
+  position: relative;
+  padding: 67px 0 46px;
+}
+
+.blog__title {
+  margin-bottom: 21px;
+}
+
+.blog__text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 43px;
+}
+
+.blog__text p {
+  max-width: 585px;
+  width: 100%;
+}
+
+.blog__text p + p {
+  margin-left: 31px;
+}
+
+.blog__post-container {
+  display: flex;
+}
+
+.blog__post-container-top {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.blog__post-container-top .post {
+  width: calc(50% - 16px);
+  margin: 0;
+}
+
+.blog__post-container-top .post + .post {
+  margin-left: 31px;
+}
+
+.blog__post-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.blog__post-container .post {
+  width: calc(33.33% - 18px);
+  max-height: 444px;
+  border-radius: 3.96923px;
+  margin: 0 26px 30px 0;
+}
+
+.blog__post-container .post:nth-child(3n) {
+  margin: 0 0 30px 0;
+}
+
+.blog__post-container .post img {
+  max-width: 383px;
+  width: 100%;
+  max-height: 207px;
+}
+
+.blog__post-container .post-info {
+  padding: 8px 16px 23px 15px;
+  position: relative;
+  top: -10px;
+}
+
+.blog__post-container .post-title {
+  max-width: 352px;
+  height: 52px;
+}
+
+.blog__post-container .post-date {
+  margin-bottom: 6px;
+}
+
+.blog__post-container .post-text {
+  margin-bottom: 20px;
+}
+
+.post-page {
+  position: relative;
+  padding-top: 201px;
+  background-color: #fff;
+  color: #131b3c;
+}
+
+.post-page > div {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.post-page > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-page > div > div > div > div > p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  margin-bottom: 16px;
+  color: #0b112a;
+}
+
+.post-page > div > div > div > div > p + div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+
+.post-page > div > div > div > div > p + div > time {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #8289a4;
+}
+
+.post-page > div > div > div > div > p + div > time + div {
+  display: flex;
+}
+
+.post-page > div > div > div > div > p + div > time + div a + a {
+  margin-left: 20px;
+}
+
+.post-page > div > div > div > div > p + div + ul {
+  list-style: disc;
+  -webkit-padding-start: 17px;
+          padding-inline-start: 17px;
+  max-width: 760px;
+  width: 100%;
+  margin-bottom: 29px;
+}
+
+.post-page > div > div > div > div > p + div + ul > li {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.post-page > div > div > div > div > p + div + ul > li + li {
+  margin-top: 12px;
+}
+
+.post-page > div > div > div > img {
+  max-width: 769px;
+  width: 100%;
+  max-height: 413px;
+  margin-bottom: 45px;
+}
+
+.post-page > div > div > div > div + img + div {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.post-page > div > div > div > div + img + div > p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 15px;
+}
+
+.post-page > div > div > div > div + img + div > p + p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 25px;
+}
+
+.post-page > div > div > div > div + img + div > p + p + p {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.post-page > div > div > div > div + img + div > p + p + p + p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+
+.post-page > div > div > div > div + img + div > p + p + p + p + p {
+  margin-top: 12px;
+}
+
+.post-page > div > div > div > div + img + div + div {
+  display: flex;
+  flex-flow: row wrap;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  margin-bottom: 45px;
+}
+
+.post-page > div > div > div > div + img + div + div > div {
+  width: 181px;
+  height: 181px;
+}
+
+.post-page > div > div > div > div + img + div + div + p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #0b112a;
+  margin-bottom: 15px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div {
+  margin-bottom: 46px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div > p + p + p + p {
+  margin-bottom: 0;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div > p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #8289a4;
+  max-width: 102px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div > div {
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div > div > p {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 4px 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #8289a4;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div {
+  display: flex;
+  align-items: center;
+  padding-bottom: 37px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div > p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  color: #8289a4;
+  max-width: 102px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div > div {
+  margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div > div > p {
+  font-family: "OpenSansCondensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 4px 23px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #8289a4;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 39px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div > div {
+  display: flex;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div > div span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div > div p {
+  margin-left: 3px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div > div + a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #f90;
+  position: relative;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div > div + a::before {
+  content: url(../images/ico/union-ico.svg);
+  position: absolute;
+  left: -17px;
+  top: 2px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div + div {
+  display: flex;
+  padding-bottom: 70px;
+  position: relative;
+  align-items: center;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div + div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: -25px;
+  background: #8289a4;
+  border-radius: 1px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div + div > img {
+  width: 65px;
+  height: 66px;
+  border-radius: 6px;
+}
+
+.post-page > div > div > div > div + img + div + div + p + div + div + div + div + div > img + textarea {
+  width: 100%;
+  height: 55px;
+  display: block;
+  resize: none;
+  margin-left: 37px;
+  padding: 7px 13px;
+  border: 1px solid #8289a4;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.post-page > div > div > aside {
+  position: relative;
+  border-radius: 6px;
+  margin-left: 44px;
+  max-width: 385px;
+  width: 100%;
+  height: 100%;
+}
+
+.post-page > div > div > aside::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(137, 213, 255, 0.1) -12.28%, rgba(255, 255, 255, 0) 100%), rgba(20, 38, 102, 0.25);
+  opacity: 0.2;
+}
+
+.post-page > div > div > aside > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 29px 48px 47px;
+  position: relative;
+}
+
+.post-page > div > div > aside > div > h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0b112a;
+  margin-bottom: 28px;
+}
+
+.post-page > div > div > aside > div > div + div {
+  margin-top: 61px;
+}
+
+.post-page > div > div > aside > div > div + div::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  max-width: 273px;
+  width: 100%;
+  height: 1px;
+  background: #8289a4;
+  margin-bottom: 28px;
+}
+
+.post-page > div > div > aside > div > div {
+  position: relative;
+  max-width: 295px;
+  width: 100%;
+}
+
+.post-page > div > div > aside > div > div > p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  min-height: 75px;
+}
+
+.post-page > div > div > aside > div > div > p + p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #8289a4;
+  margin-bottom: 0;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 1230px) {
+  .why {
+    padding-top: 112px;
+  }
+
+  .why__text-items {
+    flex-direction: column;
+  }
+
+  .why__text-item {
+    padding-bottom: 13px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .why__text-item:nth-child(even) {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    height: 96px;
+  }
+
+  .header__inner {
+    height: 96px;
+  }
+
+  .header__logo {
+    height: 96px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header__logo-img {
+    height: 96px;
+  }
+
+  .header::after {
+    height: 96px;
+    background: linear-gradient(266.19deg, #0B112A 4.45%, rgba(11, 17, 42, 0.8) 80.66%);
+  }
+
+  .header__logo-img {
+    content: url(../images/mobile-top-logo.png);
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__menu-open {
+    display: inline-block;
+  }
+
+  .header__menu-list {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  .header__lang-img {
+    margin-left: 0;
+  }
+
+  .header__lang span {
+    display: none;
+  }
+
+  .header__lang-block {
+    background: linear-gradient(266.19deg, #0B112A 4.45%, rgba(11, 17, 42, 0.8) 80.66%);
+  }
+
+  .header__lang-change {
+    left: 0;
+  }
+
+  .top__page {
+    padding-top: 108px;
+  }
+
+  .MobileMenu {
+    display: block;
+  }
+
+  .reviews {
+    padding-top: 183px;
+  }
+
+  .casino {
+    padding-top: 163px;
+  }
+
+  .slots-month {
+    padding-top: 207px;
+  }
+
+  .post-page {
+    padding-top: 222px;
+  }
+
+  .slots-month {
+    padding-top: 201.9px;
+  }
+}
+@media screen and (max-width: 1177px) {
+  .footer__row-top {
+    flex-direction: column;
+    margin-bottom: 34px;
+  }
+
+  .footer__row-comp {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .footer__row-social {
+    margin-left: 0;
+  }
+
+  .footer__row-columns {
+    width: 100%;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .footer__row-column:last-child {
+    margin-right: 0px;
+  }
+
+  .footer__logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 1114px) {
+  .slots-month-items .free-slot__card {
+    width: calc(20% - 41px);
+  }
+}
+@media screen and (max-width: 1113px) and (min-width: 960px) {
+  .slots-month-items .free-slot__card {
+    width: calc(25% - 72px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(4n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .footer__row-bottom {
+    flex-direction: column-reverse;
+  }
+
+  .footer__row-bottom ul {
+    margin-left: 0;
+  }
+
+  .casino__start-banner {
+    margin-bottom: 56px;
+  }
+}
+@media screen and (max-width: 959px) and (min-width: 881px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 109px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 880px) and (min-width: 769px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 82px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 880px) {
+  .post {
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__row-comp-img {
+    margin-bottom: 18px;
+  }
+
+  .footer__row-column + .footer__row-column {
+    margin-left: 0;
+  }
+
+  .review__inner {
+    flex-direction: column;
+  }
+
+  .review__block-text {
+    height: 404px;
+    overflow: hidden;
+  }
+
+  .review__block-left {
+    margin-top: 34px;
+  }
+
+  .review__more-btn {
+    display: block;
+  }
+
+  .review__atr {
+    margin-left: 0;
+  }
+
+  .review__atr-inner {
+    width: 100%;
+  }
+
+  .review__atr-row {
+    justify-content: flex-start;
+  }
+
+  .review__atr-row + .review__atr-row::before {
+    width: 100%;
+  }
+
+  .review__atr-info {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+
+  .review .top__casino {
+    padding-top: 25px;
+  }
+
+  .comments__item-text p {
+    left: 0;
+    padding-right: 0;
+  }
+
+  .casino__inner {
+    flex-direction: column;
+  }
+
+  .casino__info {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .casino__start {
+    margin-bottom: 11.15px;
+  }
+
+  .casino__start-banner {
+    max-width: none;
+    margin-bottom: 30px;
+  }
+
+  .casino__bonus-row {
+    background: transparent;
+    padding-bottom: 0;
+    margin-bottom: 23px;
+  }
+
+  .casino__bonus-claim {
+    width: 270px;
+  }
+
+  .casino__bonus-list {
+    width: 100%;
+  }
+
+  .casino__bonus-list::before {
+    width: 100%;
+  }
+
+  .casino__items {
+    gap: 8px;
+  }
+
+  .casino__item {
+    width: 100%;
+  }
+
+  .line {
+    top: -8px;
+  }
+
+  .reviews__inner {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .reviews__info {
+    padding-bottom: 4px;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .reviews__info::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    width: 102%;
+    height: calc(100% + 150px);
+    z-index: -1;
+    background: linear-gradient(0.36deg, rgba(11, 17, 42, 0.4) -0.46%, rgba(11, 17, 42, 0.8) 90.74%);
+  }
+
+  .reviews .top__casino {
+    margin-left: 0;
+  }
+
+  .reviews .top__casino-card {
+    margin: 0 auto;
+  }
+
+  .win__title {
+    padding-bottom: 25px;
+  }
+
+  .win__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .win__inner img {
+    margin-bottom: 42px;
+  }
+
+  .win__text {
+    margin: 0;
+  }
+
+  .win__text p {
+    margin: 0;
+  }
+
+  .win__text p + p {
+    margin-top: 12px;
+  }
+
+  .faqs {
+    padding-top: 71px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .welcome__img {
+    width: 595px;
+    margin-bottom: 25px;
+  }
+
+  .welcome__title {
+    font-size: 79px;
+    margin-bottom: 38px;
+  }
+
+  .welcome__subtitle {
+    font-size: 25px;
+  }
+
+  .welcome__items {
+    gap: 50px;
+  }
+
+  .search-inp {
+    padding: 0 39px 0 17px;
+  }
+
+  .contact__form-box-right {
+    margin-left: 25px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .breadcrumbs {
+    width: 100%;
+  }
+
+  .casino__inner {
+    flex-direction: column;
+  }
+
+  .casino__info {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .casino__start {
+    margin-bottom: 11.15px;
+  }
+
+  .casino__start-banner {
+    margin-bottom: 30px;
+  }
+
+  .casino__bonus-row {
+    background: transparent;
+    padding-bottom: 0;
+    margin-bottom: 23px;
+  }
+
+  .casino__bonus-claim {
+    width: 270px;
+  }
+
+  .casino__bonus-list {
+    width: 100%;
+  }
+
+  .casino__bonus-list::before {
+    width: 100%;
+  }
+
+  .casino__items {
+    gap: 8px;
+  }
+
+  .casino__item {
+    width: 100%;
+  }
+
+  .blog__post-container .post {
+    width: calc(50% - 13px);
+  }
+
+  .blog__post-container .post:nth-child(3n) {
+    margin: 0 26px 30px 0;
+  }
+
+  .blog__post-container .post:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .casino__card:nth-child(5n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .welcome__inner {
+    padding: 182px 0 71px;
+  }
+
+  .comments-title, .contact__title, .popular-slotty__title, .review__block-title, .casino__top--title, .win__title, .faqs__title, .blog__title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .table__title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 31px;
+  }
+
+  .table__review {
+    display: none;
+  }
+
+  .table__review-inf {
+    display: none;
+  }
+
+  .table__games {
+    display: none;
+  }
+
+  .table__games-inf {
+    display: none;
+  }
+
+  .table__deposit {
+    display: none;
+  }
+
+  .table__deposit-inf {
+    display: none;
+  }
+
+  .table__play {
+    border-radius: 2px 12px 2px 2px;
+  }
+
+  .table__play-inf {
+    border-radius: 2px 2px 12px 2px !important;
+  }
+
+  .table table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  .table tbody {
+    margin: 0 auto;
+  }
+
+  .comments__item {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .contact__form-box {
+    flex-direction: column;
+  }
+
+  .contact__form-box-right {
+    margin: 13px 0 0px;
+  }
+
+  .contact__form-textarea {
+    max-width: 100%;
+  }
+
+  .contact__form-btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contact__form-input-name {
+    width: 100%;
+  }
+
+  .contact__form-input-mail {
+    width: 100%;
+  }
+
+  .recent-bonus__item {
+    margin-bottom: 12px;
+  }
+
+  .recent-bonus__item-wrapper {
+    flex-direction: column;
+  }
+
+  .recent-bonus__item-btn {
+    margin-left: 0;
+  }
+
+  .reviews__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    color: #f90;
+    margin-bottom: 24px;
+  }
+
+  .reviews__text-block {
+    margin-bottom: 10px;
+  }
+
+  .reviews__text-block .reviews__text + .reviews__text {
+    margin-top: 10px;
+  }
+
+  .reviews__list-title {
+    margin-bottom: 11px;
+  }
+
+  .line {
+    top: -7px;
+  }
+
+  .faqs {
+    padding-top: 48px;
+  }
+
+  .faqs__item {
+    padding: 0 28px;
+  }
+
+  .faqs__item-title {
+    line-height: 24px;
+  }
+
+  .adv-search__item {
+    flex-direction: column;
+  }
+
+  .adv-search__item .slot__card {
+    margin-bottom: 22px;
+  }
+
+  .adv-search__item-wrapper {
+    margin: 0;
+    align-items: center;
+    width: 100%;
+  }
+
+  .adv-search__item + .adv-search__item {
+    margin-top: 87px;
+  }
+
+  .adv-search__item-name {
+    text-align: center;
+  }
+
+  .adv-search__item-info {
+    text-align: center;
+  }
+
+  .adv-search__item-feat {
+    text-align: center;
+  }
+
+  .page__404-inner {
+    padding-top: 75px;
+  }
+
+  .page__404-title {
+    font-size: 55px;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .page__404-title-subtitle {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 24px;
+  }
+
+  .page__404 .blog {
+    padding-top: 55px;
+  }
+
+  .page__404 .blog__text {
+    display: block;
+  }
+
+  .page__404 .blog__text p {
+    max-width: 100%;
+  }
+
+  .page__404 .blog__text p + p {
+    margin: 20px 0 0;
+  }
+
+  .blog {
+    padding-top: 45px;
+  }
+
+  .blog__text {
+    display: block;
+  }
+
+  .blog__text p {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+
+  .blog__text p + p {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+
+  .post-page > div > div {
+    flex-direction: column;
+  }
+
+  .post-page > div > div > div > div + img + div + div {
+    justify-content: center;
+    gap: 15px 15px;
+  }
+
+  .post-page > div > div > aside {
+    margin-left: 0;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 54px;
+  }
+
+  .post-page > div > div > aside > div > div {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .post-page > div > div > aside > div > div + div::before {
+    max-width: 100%;
+  }
+
+  .footer__row-social {
+    margin: 0 auto;
+  }
+
+  .footer__row-columns {
+    display: grid;
+    justify-items: center;
+    gap: 33px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__row-column {
+    width: 196px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 651px) {
+  .casino__card {
+    width: calc(25% - 15px);
+  }
+
+  .casino__card:nth-child(4n) {
+    margin: 0 0 30px 0;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 51px);
+    margin-bottom: 40px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 650px) and (min-width: 600px) {
+  .slots-month-items .free-slot__card {
+    width: calc(33.33% - 34px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .welcome__img {
+    width: 490px;
+    margin-bottom: 16px;
+  }
+
+  .welcome__title {
+    font-size: 65px;
+  }
+
+  .welcome__text {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .welcome__text span {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .welcome__items {
+    gap: 40px;
+  }
+
+  .why {
+    padding: 77px 0 58.88px;
+  }
+
+  .why__title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 15px;
+  }
+
+  .post__section-title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: start;
+    margin-bottom: 24px;
+  }
+
+  .comments__item-like {
+    display: none;
+  }
+
+  .comments__item-more {
+    display: block;
+  }
+}
+@media screen and (max-width: 736px) {
+  .recent-bonus__inner {
+    padding: 22px 23px 29px;
+  }
+
+  .comments__item-prof {
+    flex-direction: column;
+  }
+
+  .footer__row-columns {
+    justify-content: center;
+  }
+
+  .line {
+    top: -7px;
+  }
+}
+@media screen and (max-width: 726px) {
+  .faqs__items {
+    flex-direction: column;
+  }
+
+  .faqs__item {
+    width: 100%;
+  }
+
+  .faqs__item:last-child {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 650px) and (min-width: 491px) {
+  .casino__card {
+    width: calc(33.33% - 13.33px);
+  }
+
+  .casino__card:nth-child(3n) {
+    margin: 0 0 30px 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .welcome__inner {
+    padding-top: 150px;
+  }
+
+  .welcome__img {
+    width: 427px;
+    margin-bottom: 12px;
+  }
+
+  .welcome__title {
+    font-size: 58px;
+  }
+
+  .welcome__text {
+    font-size: 20px;
+  }
+
+  .welcome__text span {
+    font-size: 20px;
+  }
+
+  .welcome__items {
+    gap: 23px;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .welcome__item p {
+    width: 229px;
+  }
+
+  .post__section-title {
+    text-align: start;
+  }
+
+  .top__page-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 10px;
+  }
+
+  .popular-slotty__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .popular-slotty__title__items {
+    justify-content: space-evenly;
+  }
+
+  .comments__item-prof-name {
+    font-size: 20px;
+  }
+
+  .comments__item-text p {
+    font-size: 14px;
+  }
+
+  .contact__form {
+    padding: 36px 35px 61px 35px;
+  }
+
+  .casino {
+    padding-top: 198px;
+  }
+
+  .reviews {
+    padding-top: 204px;
+  }
+
+  .post-page {
+    padding-top: 257px;
+  }
+
+  .search__container {
+    justify-content: flex-end;
+  }
+
+  .search__container .search {
+    margin: 32px 23px 31px;
+    margin-top: 32px;
+  }
+
+  .search__container .search .search-inp {
+    background: #fff;
+  }
+
+  .page__404-title {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 7px;
+  }
+
+  .page__404-subtitle {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .page__404 .line {
+    top: -6px;
+  }
+
+  .slots-month {
+    padding-top: 215px;
+  }
+
+  .slots-month__title {
+    margin-bottom: 37px;
+  }
+
+  .slots-month-items {
+    padding-bottom: 20px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div + div, .post-page > div > div > div > div + img + div + div + p + div + div + div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__row-comp {
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 617px) {
+  .welcome__img {
+    margin-bottom: 9px;
+  }
+
+  .welcome__title {
+    margin-bottom: 24px;
+  }
+
+  .blog__post-container-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__post-container-top .post {
+    width: 100%;
+    max-width: 585px;
+  }
+
+  .blog__post-container-top .post:nth-child(1n) {
+    margin-bottom: 34px;
+  }
+
+  .blog__post-container-top .post + .blog__post-container-top .post {
+    margin-left: 0;
+  }
+
+  .blog__post-container-top .post + .post {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .slots-month-items {
+    justify-content: center;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: calc(50% - 84px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .welcome__img {
+    margin-bottom: 5px;
+  }
+
+  .welcome__title {
+    font-size: 52px;
+  }
+
+  .welcome__subtitle {
+    font-size: 23px;
+  }
+
+  .welcome__btn-gr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome__btn-gr .welcome__btn-play {
+    font-size: 14px;
+    line-height: 25px;
+    padding: 8px 20px;
+  }
+
+  .welcome__btn-gr .welcome__btn-real {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 23px;
+    padding: 8px 12px;
+    margin-left: 0;
+  }
+
+  .why__title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
+  .table__title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
+  .casino__list {
+    padding-top: 56px;
+  }
+
+  .post__section-title {
+    font-size: 37px;
+    line-height: 44px;
+  }
+
+  .top__casino-title {
+    margin-bottom: 19px;
+  }
+
+  .reviews__inner {
+    padding-bottom: 56px;
+  }
+
+  .reviews__inner__title {
+    font-size: 26px;
+    line-height: 33px;
+  }
+
+  .win__text p + p {
+    margin-top: 10px;
+  }
+
+  .footer__link-title {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 7px;
+  }
+
+  .footer__link {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+  }
+
+  .footer__link + .footer__link {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .welcome__img {
+    width: 284px;
+    margin-bottom: 3px;
+  }
+
+  .welcome__title {
+    font-size: 38px;
+    margin-bottom: 13px;
+  }
+
+  .welcome__subtitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .comments__inner {
+    padding-top: 49px;
+    padding-bottom: 56px;
+  }
+
+  .comments__inner__items {
+    margin-bottom: 38px;
+  }
+
+  .comments__inner__item {
+    padding-top: 18px;
+    padding-right: 29px;
+    padding-left: 28px;
+  }
+
+  .comments__inner__item-more {
+    right: 30px;
+  }
+
+  .comments .comments-title, .contact__title, .popular-slotty__title, .review__block-title, .casino__top--title, .win__title, .faqs__title, .slots-month__title, .blog__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .casino__top--title {
+    margin-bottom: 27px;
+  }
+
+  .footer__row-social {
+    margin: 0 auto;
+  }
+
+  .footer__row-social p {
+    margin-right: 22px;
+  }
+
+  .footer__row-social a + a {
+    margin-left: 17px;
+  }
+
+  .footer__row-columns {
+    row-gap: 22px;
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+  }
+
+  .footer__row-column {
+    width: 165px;
+  }
+
+  .footer__row .footer__link-title, .footer__row .footer__link {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .line {
+    top: -4px;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: calc(50% - 34px);
+  }
+
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 40px 0;
+  }
+
+  .footer__row-comp-img {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 490px) {
+  .casino__card {
+    width: calc(50% - 10px);
+  }
+
+  .casino__card:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+
+  .casino__top-cont {
+    justify-content: flex-start;
+  }
+
+  .reviews__list-li + .reviews__list-li {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .welcome {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .table__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .table td {
+    height: 63px;
+  }
+
+  .table td img {
+    width: 47px;
+  }
+
+  .table__bonus-inf {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .table__btn {
+    display: none;
+  }
+
+  .table__btn-mob {
+    display: inline-block;
+  }
+
+  .why__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .casino__bonus-btn {
+    width: 173px;
+    height: 41px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    margin-bottom: 7px;
+  }
+
+  .casino__bonus-btn-more {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .post {
+    max-width: 345px;
+  }
+
+  .post-info {
+    padding: 10px 14px 26px 15px;
+  }
+
+  .post-title {
+    margin-bottom: 7px;
+  }
+
+  .post-text, .post-links {
+    display: none;
+  }
+
+  .casino__info {
+    padding: 28px 19px 12px 10px;
+  }
+
+  .casino__bonus-row {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .casino__bonus-col {
+    margin: 8px 0 29px;
+  }
+
+  .casino__bonus-claim {
+    margin: 0 auto;
+  }
+
+  .casino__bonus-claim::before {
+    content: none;
+  }
+
+  .casino__bonus-inf + .casino__bonus-inf::before {
+    top: -2px;
+  }
+
+  .casino__bonus-up, .casino__bonus-txt, .casino__bonus-list {
+    display: none;
+  }
+
+  .recent-bonus__item-time {
+    margin-right: 30px;
+  }
+
+  .comments-title, .contact__title, .popular-slotty__title, .review__block-title, .casino__top--title, .win__title, .faqs__title, .blog__title, .slots-month__title {
+    text-align: left;
+  }
+
+  .popular-slotty__items {
+    justify-content: space-between;
+  }
+
+  .popular-slotty__items__btn {
+    background-color: #f90;
+  }
+
+  .footer__row-columns {
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+
+  .footer__row-social p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .slot__card {
+    width: 162px;
+    height: 187px;
+  }
+
+  .slot__card-img img {
+    width: 160px;
+    height: 111px;
+  }
+
+  .slot__card-info {
+    padding: 14px 9px 17px 10px;
+  }
+
+  .slot__card-title {
+    font-family: "OpenSansCondensed", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    height: 16px;
+    margin-bottom: 7px;
+  }
+
+  .slot__card-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slot__card .star {
+    display: flex;
+    align-items: center;
+  }
+
+  .adv-search__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .adv-search__item-name {
+    margin-bottom: 7px;
+  }
+
+  .adv-search__item-feat {
+    height: auto;
+    margin-bottom: 21px;
+  }
+
+  .post-page > div > div > div > div + img + div + div > div {
+    width: 162px;
+    height: 187px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .top__page {
+    padding-top: 105px;
+  }
+
+  .welcome {
+    background-image: url(../images/welcome-bg-mob.png);
+    background-position: right top;
+  }
+
+  .welcome__inner {
+    padding-top: 120px;
+  }
+
+  .welcome__img {
+    margin-bottom: 0;
+  }
+
+  .welcome__title {
+    margin-bottom: 1px;
+  }
+
+  .welcome__text {
+    margin-bottom: 39px;
+  }
+
+  .welcome__items {
+    gap: 12px;
+    margin-bottom: 43px;
+  }
+
+  .why {
+    background-image: url(../images/why-bg-mob.png);
+    background-position: right top;
+  }
+
+  .table {
+    padding: 53px 0 55px;
+  }
+
+  .blog {
+    padding-top: 31px;
+  }
+
+  .post {
+    max-width: 335px;
+  }
+
+  .post__section {
+    padding: 31px 0 54px;
+  }
+
+  .post__section-title {
+    margin-bottom: 7px;
+  }
+
+  .post__section-info {
+    padding-bottom: 26px;
+  }
+
+  .post__section-wrapper {
+    margin-bottom: 55px;
+  }
+
+  .casino__items {
+    gap: 5px;
+    margin-bottom: 19px;
+  }
+
+  .casino__item {
+    font-size: 10px;
+    line-height: 13px;
+    max-width: 70px;
+    height: 56px;
+  }
+
+  .casino__item-num {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .casino__bonus-title {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .casino__bonus-inf + .casino__bonus-inf::before {
+    top: 6px;
+  }
+
+  .casino__bonus .review {
+    padding-top: 34px;
+  }
+
+  .casino__bonus .review img {
+    display: none;
+  }
+
+  .casino__bonus .review__block-left {
+    margin-top: 0;
+  }
+
+  .casino__bonus .review__block-title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 28px;
+  }
+
+  .casino__bonus .review__atr {
+    background: none;
+    border: none;
+    margin-top: 0;
+  }
+
+  .casino__bonus .review__atr-inner {
+    padding: 0;
+  }
+
+  .recent-bonus {
+    padding-top: 53px;
+  }
+
+  .recent-bonus__item-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recent-bonus__item-time {
+    margin-right: 0;
+  }
+
+  .popular-slotty__items {
+    gap: 10px;
+  }
+
+  .comments-title, .contact__title, .popular-slotty__title, .review__block-title, .casino__top--title, .win__title, .faqs__title, .blog__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .comments-title {
+    margin-bottom: 22px;
+  }
+
+  .comments__item {
+    padding: 18px 29px 62px 28px;
+  }
+
+  .comments__item-top img {
+    width: 56px;
+    height: 61px;
+  }
+
+  .comments__item-prof-name {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .comments__item-prof-date {
+    font-size: 9px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+  }
+
+  .comments__item-text p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .comments__item-star-block span {
+    display: none;
+  }
+
+  .comments-btn {
+    display: none;
+  }
+
+  .comments-more {
+    display: block;
+  }
+
+  .contact {
+    padding: 28px 0 64px;
+  }
+
+  .contact__form {
+    padding: 34px 29px 30px;
+  }
+
+  .contact__form-box-left img {
+    margin-top: 36px;
+  }
+
+  .contact__form-box-right {
+    margin-top: 36px;
+  }
+
+  .contact__form-name::after {
+    top: 46px;
+  }
+
+  .contact__form-mail::after {
+    top: 46px;
+  }
+
+  .contact__form-input-name {
+    background: #fff;
+    padding-right: 13px;
+  }
+
+  .contact__form-input-mail {
+    background: #fff;
+    padding-right: 13px;
+  }
+
+  .contact__form-textarea {
+    background: #fff;
+    padding: 7px 13px;
+    margin-bottom: 33px;
+  }
+
+  .contact label {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contact-mail {
+    margin-top: 20px;
+  }
+
+  .reviews__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .reviews__text-block, .reviews__list-title, .reviews__list-li {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .top__casino-title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .top__casino-card {
+    padding: 35px 32px 42px;
+  }
+
+  .top__casino-star {
+    margin-bottom: 12px;
+  }
+
+  .top__casino-info {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 23px;
+  }
+
+  .top__casino-btn {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    padding: 8px 48px 8px 49px;
+    margin-bottom: 13px;
+  }
+
+  .top__casino-read {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .casino__card {
+    height: 203px;
+  }
+
+  .casino__card-inner {
+    height: 203px;
+    padding: 19px 10px 10px;
+  }
+
+  .faqs {
+    padding: 33px 0 64px;
+  }
+
+  .faqs__title {
+    margin-bottom: 31px;
+  }
+
+  .faqs__item {
+    min-height: 108px;
+  }
+
+  .faqs__item-top img {
+    margin: 0;
+  }
+
+  .faqs .faqs__item.open .faqs__item-top {
+    position: relative;
+    top: 7px;
+  }
+
+  .faqs .faqs__item.open .faqs__item-text {
+    top: 0;
+  }
+
+  .adv-search {
+    padding-top: 211px;
+    padding-bottom: 54px;
+  }
+
+  .adv-search__item .slot__card {
+    max-width: 162px;
+    height: 185px;
+  }
+
+  .adv-search__item-name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .adv-search__item-info {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .adv-search__item-feat {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .adv-search__item-btn {
+    max-width: 173px;
+    width: 100%;
+    height: 41px;
+  }
+
+  .adv-search__item-char + .adv-search__item-char::before {
+    top: 2px;
+  }
+
+  .page__404 {
+    background-image: url(../images/404-bg-mob.png);
+  }
+
+  .page__404-inner {
+    padding-top: 125px;
+    margin-bottom: 50px;
+  }
+
+  .page__404-top {
+    margin-bottom: 228px;
+  }
+
+  .page__404-title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .page__404-subtitle {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: 150px;
+    max-height: 177px;
+    margin: 0 35px 30px 0;
+  }
+
+  .slots-month-items .free-slot__card .free-slot__card-inner {
+    padding-bottom: 17px;
+  }
+
+  .slots-month-items .free-slot__card .free-slot__card-img {
+    margin-bottom: 14px;
+  }
+
+  .slots-month-items .free-slot__card .free-slot__card-name {
+    max-width: 125px;
+    height: 23px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .slots-month-items .free-slot__card .jq-ry-container {
+    width: auto !important;
+  }
+
+  .slots-month-items .free-slot__card .jq-ry-container > .jq-ry-group-wrapper {
+    width: auto;
+  }
+
+  .slots-month-items .free-slot__card .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 30px 0;
+  }
+
+  .blog__title {
+    margin-bottom: 13px;
+  }
+
+  .blog p + p {
+    margin-top: 12px;
+  }
+
+  .blog__text {
+    margin-bottom: 25px;
+  }
+
+  .blog__post-container {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .blog__post-container .post {
+    width: 100%;
+    margin: 0 0 34px 0;
+  }
+
+  .blog__post-container .post:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .post-page > div > div > div > div > p {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 6.73px;
+  }
+
+  .post-page > div > div > div > div > p + div {
+    align-items: center;
+    margin-bottom: 25.47px;
+  }
+
+  .post-page > div > div > div > div > p + div > time {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: -0.02em;
+  }
+
+  .post-page > div > div > div > div > p + div > time + div > a > img {
+    width: 20.56px;
+    height: 20.26px;
+  }
+
+  .post-page > div > div > div > div > p + div + ul {
+    margin-bottom: 20px;
+  }
+
+  .post-page > div > div > div > div > p + div + ul > li {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .post-page > div > div > div > img {
+    margin-bottom: 28px;
+  }
+
+  .post-page > div > div > div > div + img + div {
+    margin-bottom: 20px;
+  }
+
+  .post-page > div > div > div > div + img + div > p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page > div > div > div > div + img + div > p + p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 18px;
+  }
+
+  .post-page > div > div > div > div + img + div > p + p + p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+  }
+
+  .post-page > div > div > div > div + img + div > p + p + p + p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+  }
+
+  .post-page > div > div > div > div + img + div > p + p + p + p + p {
+    margin-top: 12px;
+  }
+
+  .post-page > div > div > div > div + img + div + div {
+    gap: 13px 12px;
+    margin-bottom: 29px;
+  }
+
+  .post-page > div > div > div > div + img + div + div > div {
+    width: 160px;
+    height: 185px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div {
+    margin-bottom: 16px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div > p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div + div > p, .post-page > div > div > div > div + img + div + div + p + div + div + div > p {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div + div > div > p, .post-page > div > div > div > div + img + div + div + p + div + div + div > div > p {
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    padding: 4px 23px;
+  }
+
+  .post-page > div > div > div > div + img + div + div + p + div + div + div + div + div {
+    padding-bottom: 46px;
+  }
+
+  .post-page > div > div > aside > div {
+    padding: 29px 33px;
+  }
+
+  .post-page > div > div > aside > div > div + div {
+    margin-top: 41px;
+  }
+
+  .post-page > div > div > aside > div > div + div::before {
+    top: -20px;
+  }
+
+  .post-page > div > div > aside > div > h4 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .post-page > div > div > aside > div > div > p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  .post-page > div > div > aside > div > div > p + p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .footer__row-comp {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+
+  .footer__row-social {
+    margin: 0;
+  }
+
+  .footer__row-comp-img {
+    height: 33px;
+  }
+
+  .line {
+    display: none;
+  }
+}
+@media screen and (max-width: 368px) {
+  .welcome__img {
+    width: 268px;
+  }
+
+  .welcome__title {
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: -5px;
+  }
+
+  .welcome__items {
+    gap: 12px;
+  }
+
+  .casino__items {
+    gap: 5px;
+  }
+
+  .casino__item {
+    height: 46px;
+    max-width: 61px;
+  }
+
+  .slot__card {
+    width: 140px;
+    height: 187px;
+  }
+
+  .slot__card-img img {
+    width: 138px;
+    height: 111px;
+  }
+
+  .slot__card-info {
+    padding: 14px 9px 13px 10px;
+  }
+
+  .slot__card-title {
+    font-family: "OpenSansCondensed", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .slot__card-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .slot__card .star {
+    display: flex;
+    align-items: center;
+  }
+
+  .casino__card:hover .casino__card-btn {
+    width: calc(100% - 6.8px);
+  }
+
+  .slots-month-items .free-slot__card {
+    margin-right: 10px;
+  }
+
+  .post-page > div > div > div > div + img + div + div > div {
+    width: 139px;
+    height: 183px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .MobileMenu__inner {
+    width: 320px;
+  }
+
+  .post {
+    max-width: 300px;
+  }
+
+  .slots-month-items .free-slot__card {
+    width: 140px;
+    max-height: 167px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+  }
+
+  .slots-month-items .free-slot__card:nth-child(2n) {
+    margin: 0 0 25px 0;
+  }
+
+  .footer__link-title, .footer__link {
+    text-align: center;
+  }
+
+  .adv-search__item-info {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .adv-search__item-feat {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .adv-search__item-char + .adv-search__item-char::before {
+    top: 0px;
+  }
+
+  .footer__row-columns {
+    display: flex;
+  }
+
+  .footer__row-social {
+    margin: 0 auto;
+  }
+}
