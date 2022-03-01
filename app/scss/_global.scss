@@ -127,7 +127,7 @@ button,
     text-overflow: ellipsis;
     padding: 0 104px;
 
-    &[type=text]::placeholder {
+    &[type=search]::placeholder {
       color: #000;
     }
   }
